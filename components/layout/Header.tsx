@@ -13,10 +13,10 @@ import { translations } from "@/lib/translations";
 const navKeys = ["home", "about", "programs", "gallery", "contact"] as const;
 const navHrefs: Record<(typeof navKeys)[number], string> = {
   home: "/",
-  about: "/about",
-  programs: "/programs",
-  gallery: "/gallery",
-  contact: "/contact",
+  about: "/",
+  programs: "/",
+  gallery: "/",
+  contact: "/",
 };
 
 export default function Header() {
