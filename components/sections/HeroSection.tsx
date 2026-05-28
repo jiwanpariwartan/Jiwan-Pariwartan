@@ -7,7 +7,7 @@ import { ChevronDown, Phone, Star, Shield, Heart } from "lucide-react";
 
 const slides = [
   {
-    gradient: "from-[#0a1628] via-[#1a2a4a] to-[#0d1f3c]",
+    gradient: "from-[#0b1a2e] via-[#1c2c4e] to-[#0e2140]",
     headline: "A New Beginning",
     sub: "Awaits You",
     description:
@@ -78,31 +78,16 @@ export default function HeroSection() {
           <motion.div
             key={current}
             className={`absolute inset-0 bg-linear-to-br ${slides[current].gradient}`}
-            initial={{
-              opacity: 0,
-              scale: 1.05,
-            }}
-            animate={{
-              opacity: 1,
-              scale: 1,
-            }}
-            exit={{
-              opacity: 0,
-              scale: 1.02,
-            }}
+            initial={{ opacity: 0 }} // ← start transparent
+            animate={{ opacity: 1 }} // ← fade in
+            exit={{ opacity: 0 }} // ← fade out
             transition={{
-              opacity: {
-                duration: 1.8,
-                ease: "easeInOut",
-              },
-              scale: {
-                duration: 6,
-                ease: "linear",
-              },
+              opacity: { duration: 1.8, ease: "easeInOut" },
             }}
             style={{
-              willChange: "opacity, transform",
+              willChange: "opacity",
               backfaceVisibility: "hidden",
+              zIndex: current, // ← newer slides on top
             }}
           />
         </AnimatePresence>
