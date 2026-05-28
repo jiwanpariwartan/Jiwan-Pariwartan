@@ -20,14 +20,14 @@ export default function HomePage() {
   return (
     <>
       <HeroSection />
-      <StatsSection />
+      {/* <StatsSection />
       <ServicesSection />
       <WhyChooseUs />
       <ProgramsSection />
       <TestimonialsSection />
       <GalleryPreview />
       <FAQSection />
-      <ContactCTA />
+      <ContactCTA /> */}
     </>
   );
 }

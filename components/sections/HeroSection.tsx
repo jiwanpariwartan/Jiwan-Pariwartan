@@ -1,12 +1,14 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
-import { ChevronDown, Phone, Star, Shield, Heart } from "lucide-react";
+import { ChevronDown, Phone, Star, Shield, Heart, Home } from "lucide-react";
 
 const slides = [
   {
+    image: "/images/hero-bg-1.jpg",
     gradient: "from-[#0b1a2e] via-[#1c2c4e] to-[#0e2140]",
     headline: "A New Beginning",
     sub: "Awaits You",
@@ -14,6 +16,7 @@ const slides = [
       "Find strength, hope, and healing at Nepal's most compassionate rehabilitation center. Every journey to recovery starts with a single, courageous step.",
   },
   {
+    image: "/images/hero-bg-2.jpg",
     gradient: "from-[#0a1628] via-[#1a2a4a] to-[#0d1f3c]",
     headline: "Heal Your Mind,",
     sub: "Reclaim Your Life",
@@ -21,6 +24,7 @@ const slides = [
       "Our evidence-based programs blend clinical expertise with holistic wellness to guide you toward lasting sobriety and mental wellbeing.",
   },
   {
+    image: "/images/hero-bg-3.jpg",
     gradient: "from-[#1a0a2e] via-[#2a1040] to-[#150820]",
     headline: "You Are Not",
     sub: "Alone in This",
@@ -41,6 +45,13 @@ const floatingCards = [
     icon: Heart,
     label: "1000+ Recovered",
     sub: "Lives transformed",
+    color: "from-pink-600/80 to-rose-700/80",
+    delay: 0.15,
+  },
+  {
+    icon: Home,
+    label: "Nepali & Western Support",
+    sub: "Support from Melbourne & Nepal",
     color: "from-pink-600/80 to-rose-700/80",
     delay: 0.15,
   },
@@ -74,29 +85,38 @@ export default function HeroSection() {
     <section className="relative min-h-screen flex flex-col overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0">
+        {/* Gradient base always visible as fallback */}
+        <div
+          className={`absolute inset-0 bg-linear-to-br ${slides[current].gradient}`}
+        />
+
+        {/* Image layer — drop hero-bg-1.jpg / hero-bg-2.jpg / hero-bg-3.jpg into /public/images/ */}
         <AnimatePresence initial={false}>
           <motion.div
             key={current}
-            className={`absolute inset-0 bg-linear-to-br ${slides[current].gradient}`}
-            initial={{ opacity: 0 }} // ← start transparent
-            animate={{ opacity: 1 }} // ← fade in
-            exit={{ opacity: 0 }} // ← fade out
-            transition={{
-              opacity: { duration: 1.8, ease: "easeInOut" },
-            }}
-            style={{
-              willChange: "opacity",
-              backfaceVisibility: "hidden",
-              zIndex: current, // ← newer slides on top
-            }}
-          />
+            className="absolute inset-0"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ opacity: { duration: 1.8, ease: "easeInOut" } }}
+            style={{ willChange: "opacity", zIndex: current }}
+          >
+            <Image
+              src={slides[current].image}
+              alt=""
+              fill
+              className="object-cover object-center opacity-30"
+              priority={current === 0}
+              sizes="100vw"
+            />
+          </motion.div>
         </AnimatePresence>
 
-        {/* Dark cinematic overlay */}
-        <div className="absolute inset-0 bg-black/25" />
+        {/* Dark overlay — keeps text legible */}
+        <div className="absolute inset-0 bg-black/55" />
 
         {/* Soft radial ambient lighting */}
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(168,85,247,0.15),transparent_45%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(168,85,247,0.12),transparent_45%)]" />
       </div>
 
       {/* Decorative bokeh orbs */}
