@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install *)",
+      "Bash(mkdir -p app/about app/programs app/gallery app/contact components/layout components/ui components/sections context actions data types lib public/images hooks)"
+    ],
+    "additionalDirectories": [
+      "/mnt/BAC48389C483469B/projectsss/Jiwan_pariwartan_tek_dai/jiwan-pariwartan/app"
+    ]
+  }
+}
