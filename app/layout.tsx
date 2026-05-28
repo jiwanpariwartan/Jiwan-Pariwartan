@@ -6,6 +6,7 @@ import Footer from "@/components/layout/Footer";
 import ScrollProgress from "@/components/ui/ScrollProgress";
 import FloatingWhatsApp from "@/components/ui/FloatingWhatsApp";
 import { ActiveSectionProvider } from "@/context/ActiveSectionContext";
+import { LanguageProvider } from "@/context/LanguageContext";
 import { Toaster } from "react-hot-toast";
 
 const poppins = Poppins({
@@ -92,6 +93,7 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <body className="min-h-full flex flex-col antialiased" suppressHydrationWarning>
+        <LanguageProvider>
         <ActiveSectionProvider>
           <ScrollProgress />
           <Header />
@@ -116,6 +118,7 @@ export default function RootLayout({
             }}
           />
         </ActiveSectionProvider>
+        </LanguageProvider>
       </body>
     </html>
   );
