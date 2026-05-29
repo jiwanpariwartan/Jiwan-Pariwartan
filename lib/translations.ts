@@ -90,6 +90,178 @@ export const translations = {
       ne: "अन्वेषण गर्न स्क्रोल गर्नुहोस्",
     },
   },
+
+  stats: {
+    livesTransformed: {
+      value: {
+        en: "2000",
+        np: "२०००",
+      },
+      suffix: {
+        en: "+",
+        np: "+",
+      },
+      label: {
+        en: "Lives Transformed",
+        ne: "परिवर्तित जीवनहरू",
+      },
+    },
+
+    yearsOfExcellence: {
+      value: {
+        en: "5",
+        np: "५",
+      },
+      suffix: {
+        en: "+",
+        np: "+",
+      },
+      label: {
+        en: "Years of Excellence",
+        ne: "उत्कृष्ट सेवाका वर्षहरू",
+      },
+    },
+
+    recoverySuccessRate: {
+      value: {
+        en: "96",
+        np: "९६",
+      },
+      suffix: {
+        en: "%",
+        np: "%",
+      },
+      label: {
+        en: "Recovery Success Rate",
+        ne: "सफल पुनर्स्थापना दर",
+      },
+    },
+
+    medicalSupport: {
+      value: {
+        en: "24",
+        np: "२४",
+      },
+      suffix: {
+        en: "/7",
+        np: "/७",
+      },
+      label: {
+        en: "Medical Support",
+        ne: "२४/७ स्वास्थ्य सहयोग",
+      },
+    },
+  },
+
+  servicesSection: {
+    // Long Introduction Paragraph
+    name: {
+      en: "Jiwan Pariwartan Rehab Center",
+      np: "जीवन परिवर्तन रिह्याब सेन्टर",
+    },
+
+    description: {
+      en: " is a professionally operated rehabilitation and recovery center dedicated to helping individuals overcome drug addiction, alcohol dependency, and mental health challenges. Located in a peaceful and supportive environment, the center provides compassionate, affordable, and evidence-based residential treatment programs designed to support long-term healing, personal transformation, and recovery for individuals and families seeking a better future.",
+      np: " एक व्यावसायिक रूपमा सञ्चालित पुनर्स्थापना तथा रिकभरी सेन्टर हो जसले व्यक्तिहरूलाई लागू पदार्थको लत, मदिराको लत र मानसिक स्वास्थ्य समस्याबाट मुक्त गर्न मद्दत गर्दछ। शान्त र सहयोगी वातावरणमा अवस्थित यो केन्द्रले करुणामय, किफायती र प्रमाण-आधारित आवासीय उपचार कार्यक्रम प्रदान गर्दछ जसले दीर्घकालीन उपचार, व्यक्तिगत परिवर्तन र व्यक्तिहरू तथा परिवारहरूलाई राम्रो भविष्यको लागि रिकभरीमा सहयोग गर्दछ।",
+    },
+
+    // Section Title
+    eyebrow: {
+      en: "What We Offer",
+      np: "हामी के प्रस्ताव गर्छौं",
+    },
+
+    title: {
+      en: "Comprehensive Care for",
+      np: "सम्पूर्ण हेरचाह",
+    },
+
+    highlight: {
+      en: "Complete Recovery",
+      np: "पूर्ण रिकभरी",
+    },
+
+    subtitle: {
+      en: "Our multidisciplinary team delivers integrated treatment addressing every dimension of your wellbeing — physical, psychological, social, and spiritual.",
+      np: "हाम्रो बहु-विषयक टोलीले शारीरिक, मानसिक, सामाजिक र आध्यात्मिक सबै आयामलाई सम्बोधन गर्दै एकीकृत उपचार प्रदान गर्दछ।",
+    },
+
+    // Services Data
+    services: [
+      {
+        icon: "Stethoscope",
+        color: "bg-blue-100 text-blue-600",
+        title: {
+          en: "Medical Detoxification",
+          np: "चिकित्सकीय डिटक्सिफिकेशन",
+        },
+        description: {
+          en: "Safe and supervised withdrawal management with 24/7 medical support to minimize discomfort and risks.",
+          np: "असुविधा र जोखिमलाई न्यूनतम बनाउन २४/७ चिकित्सकीय सहयोगसहित सुरक्षित र पर्यवेक्षित डिटक्स प्रक्रिया।",
+        },
+      },
+      {
+        icon: "MessageCircle",
+        color: "bg-purple-100 text-purple-600",
+        title: {
+          en: "Individual & Group Therapy",
+          np: "व्यक्तिगत तथा समूह थेरापी",
+        },
+        description: {
+          en: "Evidence-based counseling sessions including CBT, DBT, and trauma-informed therapy.",
+          np: "CBT, DBT र ट्रमा-इन्फर्म्ड थेरापीसहित प्रमाण-आधारित काउन्सेलिङ सत्रहरू।",
+        },
+      },
+      {
+        icon: "Users",
+        color: "bg-amber-100 text-amber-600",
+        title: {
+          en: "Family Counseling",
+          np: "परिवार काउन्सेलिङ",
+        },
+        description: {
+          en: "Healing family relationships and building strong support systems essential for long-term recovery.",
+          np: "दीर्घकालीन रिकभरीका लागि आवश्यक परिवार सम्बन्ध सुधार र बलियो समर्थन प्रणाली निर्माण।",
+        },
+      },
+      {
+        icon: "Leaf",
+        color: "bg-emerald-100 text-emerald-600",
+        title: {
+          en: "Holistic Wellness",
+          np: "समग्र स्वास्थ्य",
+        },
+        description: {
+          en: "Yoga, meditation, nutrition planning, and mindfulness practices for complete mind-body healing.",
+          np: "पूर्ण मानसिक-शारीरिक उपचारका लागि योग, ध्यान, पोषण योजना र माइन्डफुलनेस अभ्यास।",
+        },
+      },
+      {
+        icon: "Heart",
+        color: "bg-rose-100 text-rose-600",
+        title: {
+          en: "Aftercare & Relapse Prevention",
+          np: "पछिको हेरचाह तथा रिलाप्स रोकथाम",
+        },
+        description: {
+          en: "Continued support, alumni programs, and relapse prevention strategies for sustained sobriety.",
+          np: "दीर्घकालीन sobriety का लागि निरन्तर सहयोग, पूर्व विद्यार्थी कार्यक्रम र रिलाप्स रोकथाम रणनीति।",
+        },
+      },
+      {
+        icon: "Shield",
+        color: "bg-indigo-100 text-indigo-600",
+        title: {
+          en: "Safe & Supportive Environment",
+          np: "सुरक्षित र सहयोगी वातावरण",
+        },
+        description: {
+          en: "24/7 supervised residential care in a serene, confidential, and healing atmosphere.",
+          np: "शान्त, गोप्य र उपचारात्मक वातावरणमा २४/७ पर्यवेक्षित आवासीय सेवा।",
+        },
+      },
+    ],
+  },
 } as const;
 
 export type TranslationKey = typeof translations;
