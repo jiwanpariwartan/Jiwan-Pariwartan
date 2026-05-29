@@ -22,9 +22,9 @@ export default function HomePage() {
       <HeroSection />
       <StatsSection />
       <ServicesSection />
-      {/* 
       <WhyChooseUs />
       <ProgramsSection />
+      {/* 
       <TestimonialsSection />
       <GalleryPreview />
       <FAQSection />

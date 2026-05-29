@@ -13,7 +13,7 @@ import { translations } from "@/lib/translations";
 const navKeys = ["home", "about", "programs", "gallery", "contact"] as const;
 const navHrefs: Record<(typeof navKeys)[number], string> = {
   home: "/",
-  // about: "/about",
+  about: "/about",
   about: "x",
 
   // programs: "/programs",
