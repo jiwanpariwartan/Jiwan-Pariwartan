@@ -1,4 +1,5 @@
 export const translations = {
+  // header
   header: {
     nav: {
       home: { en: "Home", ne: "घर" },
@@ -13,6 +14,7 @@ export const translations = {
     phone: { en: "+977-9805667436", ne: "+९७७-९८०५६६७४३६" },
   },
 
+  // hero
   hero: {
     badge: {
       en: "Rehabilitation & Recovery Center · Nepal",
@@ -91,6 +93,7 @@ export const translations = {
     },
   },
 
+  // stats
   stats: {
     livesTransformed: {
       value: {
@@ -153,6 +156,7 @@ export const translations = {
     },
   },
 
+  // services
   servicesSection: {
     // Long Introduction Paragraph
     name: {
@@ -261,6 +265,178 @@ export const translations = {
         },
       },
     ],
+  },
+
+  // why Choose us
+  whyChooseUs: {
+    eyebrow: {
+      en: "Why Jiwan Pariwartan",
+      ne: "किन जीवन परिवर्तन",
+    },
+    title: {
+      en: "Nepal's Most Trusted",
+      ne: "नेपालको सबैभन्दा विश्वसनीय",
+    },
+    highlight: {
+      en: "Recovery Center",
+      ne: "पुनर्स्थापना केन्द्र",
+    },
+    subtitle: {
+      en: "We combine clinical excellence with genuine human connection to deliver outcomes that last a lifetime.",
+      ne: "हामी दीर्घकालीन परिणाम सुनिश्चित गर्न चिकित्सकीय उत्कृष्टता र मानवीय सम्बन्धलाई एकसाथ जोड्छौं।",
+    },
+
+    reasons: {
+      accredited: {
+        title: {
+          en: "Accredited & Certified",
+          ne: "मान्यता प्राप्त र प्रमाणित",
+        },
+        description: {
+          en: "Recognized by Nepal's health authorities with internationally trained specialists and evidence-based protocols.",
+          ne: "नेपालका स्वास्थ्य निकायबाट मान्यता प्राप्त, अन्तर्राष्ट्रिय रूपमा प्रशिक्षित विशेषज्ञ र प्रमाणमा आधारित उपचार प्रणाली।",
+        },
+      },
+
+      compassion: {
+        title: {
+          en: "Compassion-First Care",
+          ne: "करुणामय सेवा",
+        },
+        description: {
+          en: "We treat every person with dignity, respect, and deep empathy — never as a patient number, always as a human being.",
+          ne: "हामी प्रत्येक व्यक्तिलाई सम्मान, मर्यादा र सहानुभूतिका साथ व्यवहार गर्छौं — केवल बिरामीको रूपमा होइन, एक मानवको रूपमा।",
+        },
+      },
+
+      holistic: {
+        title: {
+          en: "Holistic Healing",
+          ne: "समग्र उपचार",
+        },
+        description: {
+          en: "Integrating clinical medicine with yoga, meditation, nutrition, and art therapy for whole-person recovery.",
+          ne: "योग, ध्यान, पोषण र कला-चिकित्सासँग चिकित्सकीय उपचारलाई समेटेर सम्पूर्ण पुनर्स्थापनामा केन्द्रित।",
+        },
+      },
+
+      support: {
+        title: {
+          en: "24/7 Medical Support",
+          ne: "२४/७ चिकित्सकीय सहयोग",
+        },
+        description: {
+          en: "Round-the-clock access to our clinical team during the critical early phases of recovery and detox.",
+          ne: "पुनर्स्थापना र डिटक्सको प्रारम्भिक महत्वपूर्ण चरणमा चौबीसै घण्टा चिकित्सकीय टोलीको साथ।",
+        },
+      },
+
+      environment: {
+        title: {
+          en: "Serene Environment",
+          ne: "शान्त वातावरण",
+        },
+        description: {
+          en: "A peaceful, nature-inspired healing environment specifically designed to reduce stress and promote restoration.",
+          ne: "तनाव कम गर्न र पुनःस्थापनालाई प्रोत्साहन गर्न प्रकृतिमैत्री तथा शान्त वातावरण।",
+        },
+      },
+
+      outcomes: {
+        title: {
+          en: "Proven Outcomes",
+          ne: "सफल परिणामहरू",
+        },
+        description: {
+          en: "With a 96% success rate and 1000+ alumni, our track record speaks to the effectiveness of our approach.",
+          ne: "९६% सफलता दर र १००० भन्दा बढी पूर्व सदस्यहरूको विश्वासले हाम्रो प्रभावकारी उपचार पद्धति प्रमाणित गर्दछ।",
+        },
+      },
+    },
+  },
+
+  // program
+  programsSection: {
+    eyebrow: {
+      en: "Our Programs",
+      ne: "हाम्रा कार्यक्रमहरू",
+    },
+    title: {
+      en: "Personalized Paths to",
+      ne: "व्यक्तिगत यात्राबाट",
+    },
+    highlight: {
+      en: "Lasting Recovery",
+      ne: "दिगो पुनर्स्थापना",
+    },
+    subtitle: {
+      en: "Each program is tailored to your unique needs, history, and goals — because no two recovery journeys are the same.",
+      ne: "प्रत्येक कार्यक्रम तपाईंको आवश्यकता, अनुभव र लक्ष्यअनुसार तयार गरिएको छ किनकि पुनर्स्थापनाको यात्रा सबैको फरक हुन्छ।",
+    },
+    learnMore: {
+      en: "Learn More",
+      ne: "थप जान्नुहोस्",
+    },
+    viewAllPrograms: {
+      en: "View All Programs",
+      ne: "सबै कार्यक्रमहरू हेर्नुहोस्",
+    },
+    programLabel: {
+      en: "Program",
+      ne: "कार्यक्रम",
+    },
+  },
+
+  // program header
+  programHeader: {
+    eyebrow: {
+      en: "Treatment Programs",
+      ne: "उपचार कार्यक्रमहरू",
+    },
+    titleStart: {
+      en: "Personalized Programs for",
+      ne: "व्यक्तिगत कार्यक्रमहरू",
+    },
+    titleHighlight: {
+      en: "Every Journey",
+      ne: "हरेक यात्राका लागि",
+    },
+    subtitle: {
+      en: "Recovery is not one-size-fits-all. Our programs are carefully designed to address your specific needs, history, and goals with evidence-based and holistic approaches.",
+      ne: "पुनर्स्थापना एउटै ढाँचामा हुँदैन। हाम्रा कार्यक्रमहरू तपाईंको विशेष आवश्यकता, इतिहास र लक्ष्यलाई प्रमाण-आधारित तथा समग्र दृष्टिकोणबाट सम्बोधन गर्न सावधानीपूर्वक तयार गरिएका छन्।",
+    },
+  },
+
+  // contactsCTA
+  contactsCTA: {
+    badge: {
+      en: "Confidential & Judgment-Free",
+      ne: "गोपनीय तथा निर्णय-मुक्त",
+    },
+    titleStart: {
+      en: "Take the First Step",
+      ne: "पहिलो कदम चाल्नुहोस्",
+    },
+    titleHighlight: {
+      en: "Toward Healing Today",
+      ne: "आजै उपचारतर्फ",
+    },
+    subtitle: {
+      en: "Recovery is possible. Help is available. Our team is ready to guide you or your loved one through every step of the journey — with compassion, expertise, and unwavering support.",
+      ne: "पुनर्स्थापना सम्भव छ। सहयोग उपलब्ध छ। हाम्रो टोली तपाईं वा तपाईंका प्रियजनलाई यात्राको हरेक कदममा — करुणा, विशेषज्ञता र अटल समर्थनका साथ मार्गदर्शन गर्न तयार छ।",
+    },
+    cta: {
+      en: "Start Your Recovery Journey",
+      ne: "आफ्नो पुनर्स्थापना यात्रा सुरु गर्नुहोस्",
+    },
+    helpline: {
+      en: "24/7 Helpline",
+      ne: "२४/७ हेल्पलाइन",
+    },
+    footnote: {
+      en: "Free confidential consultation · No commitment required · Available 24/7",
+      ne: "नि:शुल्क गोपनीय परामर्श · कुनै प्रतिबद्धता आवश्यक छैन · २४/७ उपलब्ध",
+    },
   },
 } as const;
 

@@ -1,12 +1,19 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useLanguage } from "@/context/LanguageContext";
+import { translations } from "@/lib/translations";
 
 export default function ProgramsHero() {
+  const { language } = useLanguage();
+
+  const t = translations.programHeader;
+
   return (
     <section className="relative min-h-[60vh] flex items-end overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-indigo-950 via-purple-950 to-violet-900" />
-      <div className="absolute inset-0"
+      <div className="absolute inset-0 bg-linear-to-br from-indigo-950 via-purple-950 to-violet-900" />
+      <div
+        className="absolute inset-0"
         style={{
           backgroundImage:
             "radial-gradient(ellipse at 20% 70%, rgba(139,92,246,0.18) 0%, transparent 50%), radial-gradient(ellipse at 80% 20%, rgba(99,102,241,0.12) 0%, transparent 50%)",
@@ -28,20 +35,26 @@ export default function ProgramsHero() {
           transition={{ duration: 0.8 }}
         >
           <span className="inline-block text-xs font-bold tracking-[0.2em] uppercase text-purple-300 bg-purple-500/15 border border-purple-500/20 px-4 py-2 rounded-full mb-6">
-            Treatment Programs
+            {t.eyebrow[language]}
           </span>
           <h1 className="font-display font-bold text-5xl sm:text-6xl lg:text-7xl text-white leading-tight mb-6 max-w-3xl">
-            Personalized Programs for{" "}
-            <span className="gradient-text-purple">Every Journey</span>
+            {t.titleStart[language]}{" "}
+            <span className="gradient-text-purple">
+              {t.titleHighlight[language]}
+            </span>
           </h1>
           <p className="text-lg text-gray-300 max-w-2xl leading-relaxed">
-            Recovery is not one-size-fits-all. Our programs are carefully designed to address your specific needs, history, and goals with evidence-based and holistic approaches.
+            {t.subtitle[language]}
           </p>
         </motion.div>
       </div>
 
       <div className="absolute bottom-0 inset-x-0 pointer-events-none">
-        <svg viewBox="0 0 1440 60" className="w-full" preserveAspectRatio="none">
+        <svg
+          viewBox="0 0 1440 60"
+          className="w-full"
+          preserveAspectRatio="none"
+        >
           <path d="M0,30 C480,60 960,0 1440,30 L1440,60 L0,60 Z" fill="white" />
         </svg>
       </div>

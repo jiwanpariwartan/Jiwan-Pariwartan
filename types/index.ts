@@ -3,14 +3,18 @@ export interface NavItem {
   href: string;
 }
 
+export type LocalizedText = {
+  en: string;
+  ne: string;
+};
 export interface Program {
   id: string;
-  title: string;
-  description: string;
-  duration: string;
+  title: LocalizedText;
+  description: LocalizedText;
+  duration: LocalizedText;
   icon: string;
-  features: string[];
   color: string;
+  features: LocalizedText[];
 }
 
 export interface Testimonial {

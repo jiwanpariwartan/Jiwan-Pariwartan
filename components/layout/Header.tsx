@@ -14,12 +14,9 @@ const navKeys = ["home", "about", "programs", "gallery", "contact"] as const;
 const navHrefs: Record<(typeof navKeys)[number], string> = {
   home: "/",
   about: "/about",
-  // programs: "/programs",
-  // gallery: "/gallery",
-  // contact: "/contact",
-  programs: "/xxxx",
-  gallery: "/xxxx",
-  contact: "/xxxxxxx",
+  programs: "/programs",
+  gallery: "/gallery",
+  contact: "/contact",
 };
 
 export default function Header() {
