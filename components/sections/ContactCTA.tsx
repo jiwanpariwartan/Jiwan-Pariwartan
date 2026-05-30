@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { Phone, ArrowRight, Shield } from "lucide-react";
@@ -15,15 +16,18 @@ export default function ContactCTA() {
 
   return (
     <section className="py-24 lg:py-32 relative overflow-hidden">
-      {/* Background */}
-      <div className="absolute inset-0 bg-linear-to-br from-purple-700 via-violet-700 to-indigo-800" />
-      <div
-        className="absolute inset-0"
-        style={{
-          backgroundImage:
-            "radial-gradient(ellipse at 30% 50%, rgba(255,255,255,0.05) 0%, transparent 60%), radial-gradient(ellipse at 70% 30%, rgba(212,175,55,0.08) 0%, transparent 60%)",
-        }}
-      />
+      {/* Background image */}
+      <div className="absolute inset-0">
+        <Image
+          src="/images/contact-cta.webp"
+          alt=""
+          fill
+          className="object-cover object-center opacity-40"
+          sizes="100vw"
+        />
+        {/* Dark overlay */}
+        <div className="absolute inset-0 bg-black/75" />
+      </div>
 
       {/* Floating orbs */}
       <div className="absolute top-0 right-0 w-80 h-80 rounded-full bg-violet-500/20 blur-3xl pointer-events-none animate-float-slow" />
@@ -47,9 +51,7 @@ export default function ContactCTA() {
           <h2 className="font-display font-bold text-4xl sm:text-5xl lg:text-6xl text-white leading-tight mb-6">
             {t.titleStart[language]}
             <br />
-            <span className="text-purple-200">
-              {t.titleHighlight[language]}
-            </span>
+            <span className="text-[#724cf9]">{t.titleHighlight[language]}</span>
           </h2>
 
           <p className="text-lg text-purple-100 leading-relaxed max-w-2xl mx-auto mb-12">
@@ -72,9 +74,7 @@ export default function ContactCTA() {
             </a>
           </div>
 
-          <p className="text-purple-300/70 text-sm mt-8">
-            {t.footnote[language]}
-          </p>
+          <p className="text-[#f0fff1] text-sm mt-8">{t.footnote[language]}</p>
         </motion.div>
       </div>
     </section>
