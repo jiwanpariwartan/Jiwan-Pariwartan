@@ -26,8 +26,8 @@ export default function HomePage() {
       <ProgramsSection />
       <TestimonialsSection />
       <GalleryPreview />
-      {/* 
       <FAQSection />
+      {/* 
       <ContactCTA /> */}
     </>
   );

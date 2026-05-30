@@ -27,10 +27,10 @@ export interface Testimonial {
   color: string;
 }
 
-export interface FAQItem {
-  question: string;
-  answer: string;
-}
+export type FAQItem = {
+  question: { en: string; ne: string };
+  answer: { en: string; ne: string };
+};
 
 export interface TeamMember {
   name: string;
