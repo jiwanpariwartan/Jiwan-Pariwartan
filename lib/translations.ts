@@ -438,6 +438,17 @@ export const translations = {
       ne: "नि:शुल्क गोपनीय परामर्श · कुनै प्रतिबद्धता आवश्यक छैन · २४/७ उपलब्ध",
     },
   },
+
+  // testimonials
+  testimonialsSection: {
+    eyebrow: { en: "Recovery Stories", ne: "पुनर्स्थापनाका कथाहरू" },
+    title: { en: "Real Lives,", ne: "वास्तविक जीवन," },
+    highlight: { en: "Real Transformation", ne: "वास्तविक रूपान्तरण" },
+    subtitle: {
+      en: "Hear from those who have walked the path of recovery at Jiwan Pariwartan.",
+      ne: "जीवन परिवर्तनमा पुनर्स्थापनाको मार्गमा हिँडेकाहरूबाट सुन्नुहोस्।",
+    },
+  },
 } as const;
 
 export type TranslationKey = typeof translations;

@@ -6,10 +6,14 @@ import { useInView } from "react-intersection-observer";
 import { ChevronLeft, ChevronRight, Star, Quote } from "lucide-react";
 import SectionTitle from "@/components/ui/SectionTitle";
 import { testimonials } from "@/data/testimonials";
+import { useLanguage } from "@/context/LanguageContext";
+import { translations } from "@/lib/translations";
 
 export default function TestimonialsSection() {
   const [current, setCurrent] = useState(0);
-  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 });
+  const { ref } = useInView({ triggerOnce: true, threshold: 0.2 });
+  const { language } = useLanguage();
+  const tr = translations.testimonialsSection;
 
   function prev() {
     setCurrent((c) => (c - 1 + testimonials.length) % testimonials.length);
@@ -21,18 +25,18 @@ export default function TestimonialsSection() {
   const t = testimonials[current];
 
   return (
-    <section className="py-24 lg:py-32 bg-gray-50 relative overflow-hidden">
-      <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-purple-200 to-transparent" />
+    <section className="py-24 lg:py-32 bg-[#e2fdff] relative overflow-hidden">
+      <div className="absolute top-0 inset-x-0 h-px bg-linear-to-r from-transparent via-purple-200 to-transparent" />
       <div className="absolute -top-40 right-0 w-96 h-96 rounded-full bg-purple-100/50 blur-3xl pointer-events-none" />
       <div className="absolute -bottom-40 left-0 w-72 h-72 rounded-full bg-violet-100/50 blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-16">
           <SectionTitle
-            eyebrow="Recovery Stories"
-            title="Real Lives,"
-            highlight="Real Transformation"
-            subtitle="Hear from those who have walked the path of recovery at Jiwan Pariwartan."
+            eyebrow={tr.eyebrow[language]}
+            title={tr.title[language]}
+            highlight={tr.highlight[language]}
+            subtitle={tr.subtitle[language]}
           />
         </div>
 
@@ -53,25 +57,32 @@ export default function TestimonialsSection() {
                 {/* Stars */}
                 <div className="flex gap-1 mb-6">
                   {[...Array(t.rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 text-amber-400 fill-amber-400" />
+                    <Star
+                      key={i}
+                      className="w-5 h-5 text-amber-400 fill-amber-400"
+                    />
                   ))}
                 </div>
 
                 <blockquote className="text-lg lg:text-xl text-gray-700 leading-relaxed font-medium mb-8 max-w-3xl">
-                  &ldquo;{t.content}&rdquo;
+                  &ldquo;{t.content[language]}&rdquo;
                 </blockquote>
 
                 <div className="flex items-center gap-4">
                   <div
-                    className={`w-14 h-14 rounded-full bg-gradient-to-br ${t.color} flex items-center justify-center shadow-lg`}
+                    className={`w-14 h-14 rounded-full bg-linear-to-br ${t.color} flex items-center justify-center shadow-lg`}
                   >
                     <span className="text-white font-bold font-display text-base">
                       {t.initials}
                     </span>
                   </div>
                   <div>
-                    <p className="font-display font-bold text-gray-900">{t.name}</p>
-                    <p className="text-purple-600 text-sm">{t.role}</p>
+                    <p className="font-display font-bold text-gray-900">
+                      {t.name}
+                    </p>
+                    <p className="text-purple-600 text-sm">
+                      {t.role[language]}
+                    </p>
                   </div>
                 </div>
               </motion.div>
@@ -128,9 +139,11 @@ export default function TestimonialsSection() {
                 }`}
               >
                 <div
-                  className={`w-6 h-6 rounded-full bg-gradient-to-br ${item.color} flex items-center justify-center`}
+                  className={`w-6 h-6 rounded-full bg-linear-to-br ${item.color} flex items-center justify-center`}
                 >
-                  <span className="text-white font-bold text-xs">{item.initials[0]}</span>
+                  <span className="text-white font-bold text-xs">
+                    {item.initials[0]}
+                  </span>
                 </div>
                 <span className="text-sm font-medium">{item.name}</span>
               </button>

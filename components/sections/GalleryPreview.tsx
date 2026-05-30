@@ -1,71 +1,115 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { ArrowRight } from "lucide-react";
 import SectionTitle from "@/components/ui/SectionTitle";
+import { useLanguage } from "@/context/LanguageContext";
+
+const t = {
+  eyebrow: { en: "Our Facility", ne: "हाम्रो सुविधा" },
+  title: { en: "A Space Designed", ne: "उपचारका लागि" },
+  highlight: { en: "to Heal", ne: "डिजाइन गरिएको ठाउँ" },
+  subtitle: {
+    en: "Our center is purposefully crafted — every space, every detail designed to foster calm, safety, and restoration.",
+    ne: "हाम्रो केन्द्र उद्देश्यपूर्वक निर्मित छ — हरेक ठाउँ, हरेक विवरण शान्ति, सुरक्षा र पुनर्स्थापनाको लागि डिजाइन गरिएको छ।",
+  },
+  viewGallery: { en: "View Full Gallery", ne: "पूर्ण ग्यालेरी हेर्नुहोस्" },
+};
 
 const galleryItems = [
-  { id: 1, label: "Healing Gardens", color: "from-purple-400/80 to-violet-600/80", bg: "bg-gradient-to-br from-purple-100 to-violet-200", size: "col-span-2 row-span-2" },
-  { id: 2, label: "Therapy Rooms", color: "from-indigo-400/80 to-blue-600/80", bg: "bg-gradient-to-br from-indigo-100 to-blue-200", size: "" },
-  { id: 3, label: "Yoga Studio", color: "from-teal-400/80 to-cyan-600/80", bg: "bg-gradient-to-br from-teal-100 to-cyan-200", size: "" },
-  { id: 4, label: "Group Sessions", color: "from-pink-400/80 to-rose-600/80", bg: "bg-gradient-to-br from-pink-100 to-rose-200", size: "" },
-  { id: 5, label: "Dining & Nutrition", color: "from-amber-400/80 to-orange-600/80", bg: "bg-gradient-to-br from-amber-100 to-orange-200", size: "" },
-  { id: 6, label: "Meditation Space", color: "from-violet-400/80 to-purple-600/80", bg: "bg-gradient-to-br from-violet-100 to-purple-200", size: "" },
+  {
+    id: 1,
+    label: { en: "Healing Gardens", ne: "उपचार बगैंचा" },
+    src: "/images/gallery/healing-gardens.jpg",
+    size: "col-span-2 row-span-2",
+  },
+  {
+    id: 2,
+    label: { en: "Therapy Rooms", ne: "थेरापी कोठाहरू" },
+    src: "/images/gallery/therapy-rooms.jpg",
+    size: "",
+  },
+  {
+    id: 3,
+    label: { en: "Yoga Studio", ne: "योग स्टुडियो" },
+    src: "/images/gallery/yoga-studio.webp",
+    size: "",
+  },
+  {
+    id: 4,
+    label: { en: "Group Sessions", ne: "समूह सत्रहरू" },
+    src: "/images/gallery/group-session.webp",
+    size: "",
+  },
+  {
+    id: 5,
+    label: { en: "Dining & Nutrition", ne: "भोजन तथा पोषण" },
+    src: "/images/gallery/dining-nutrition.webp",
+    size: "",
+  },
+  {
+    id: 6,
+    label: { en: "Meditation Space", ne: "ध्यान स्थान" },
+    src: "/images/gallery/meditation-space.webp",
+    size: "",
+  },
 ];
 
 export default function GalleryPreview() {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.1 });
+  const { language } = useLanguage();
 
   return (
     <section className="py-24 lg:py-32 bg-white relative overflow-hidden">
-      <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-purple-200 to-transparent" />
+      <div className="absolute top-0 inset-x-0 h-px bg-linear-to-r from-transparent via-purple-200 to-transparent" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8 mb-12">
           <SectionTitle
-            eyebrow="Our Facility"
-            title="A Space Designed"
-            highlight="to Heal"
-            subtitle="Our center is purposefully crafted — every space, every detail designed to foster calm, safety, and restoration."
+            eyebrow={t.eyebrow[language]}
+            title={t.title[language]}
+            highlight={t.highlight[language]}
+            subtitle={t.subtitle[language]}
             centered={false}
           />
           <Link
             href="/gallery"
             className="shrink-0 inline-flex items-center gap-2 px-6 py-3 rounded-full font-semibold text-sm border border-purple-200 text-purple-700 hover:bg-purple-50 transition-all duration-300"
           >
-            View Full Gallery <ArrowRight className="w-4 h-4" />
+            {t.viewGallery[language]} <ArrowRight className="w-4 h-4" />
           </Link>
         </div>
 
-        <div ref={ref} className="grid grid-cols-2 lg:grid-cols-4 grid-rows-2 gap-4 h-[480px] lg:h-[560px]">
+        <div
+          ref={ref}
+          className="grid grid-cols-2 lg:grid-cols-4 grid-rows-2 gap-4 h-120 lg:h-140"
+        >
           {galleryItems.map((item, i) => (
             <motion.div
               key={item.id}
               initial={{ opacity: 0, scale: 0.95 }}
               animate={inView ? { opacity: 1, scale: 1 } : {}}
               transition={{ duration: 0.6, delay: i * 0.08 }}
-              className={`${item.size} ${item.bg} rounded-2xl overflow-hidden group relative cursor-pointer`}
+              className={`${item.size} rounded-2xl overflow-hidden group relative cursor-pointer bg-purple-100`}
             >
+              {/* Image */}
+              <Image
+                src={item.src}
+                alt={item.label.en}
+                fill
+                className="object-cover transition-transform duration-700 group-hover:scale-105"
+                sizes="(max-width: 768px) 50vw, 25vw"
+              />
+
               {/* Hover overlay */}
-              <div
-                className={`absolute inset-0 bg-gradient-to-t ${item.color} opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-5`}
-              >
-                <p className="text-white font-display font-semibold text-sm translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                  {item.label}
+              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-all duration-500 flex items-end p-5">
+                <p className="text-white font-display font-semibold text-sm translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
+                  {item.label[language]}
                 </p>
               </div>
-
-              {/* Decorative pattern */}
-              <div
-                className="absolute inset-0 opacity-20"
-                style={{
-                  backgroundImage:
-                    "radial-gradient(circle, rgba(255,255,255,0.5) 1px, transparent 1px)",
-                  backgroundSize: "20px 20px",
-                }}
-              />
             </motion.div>
           ))}
         </div>

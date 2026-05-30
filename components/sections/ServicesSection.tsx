@@ -31,7 +31,7 @@ export default function ServicesSection() {
   const t = translations.servicesSection;
 
   return (
-    <section className="py-12 lg:py-14 bg-[#ddbdfc] relative overflow-hidden">
+    <section className="py-12 lg:py-14 bg-[#c8e7ff] relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-purple-50 blur-3xl opacity-60 pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-72 h-72 rounded-full bg-violet-50 blur-3xl opacity-60 pointer-events-none" />

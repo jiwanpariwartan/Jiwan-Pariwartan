@@ -20,8 +20,8 @@ export interface Program {
 export interface Testimonial {
   id: string;
   name: string;
-  role: string;
-  content: string;
+  role: { en: string; ne: string };
+  content: { en: string; ne: string };
   rating: number;
   initials: string;
   color: string;

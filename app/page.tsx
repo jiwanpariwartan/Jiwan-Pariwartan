@@ -24,9 +24,9 @@ export default function HomePage() {
       <ServicesSection />
       <WhyChooseUs />
       <ProgramsSection />
-      {/* 
       <TestimonialsSection />
       <GalleryPreview />
+      {/* 
       <FAQSection />
       <ContactCTA /> */}
     </>
