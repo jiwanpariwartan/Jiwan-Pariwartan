@@ -3,6 +3,7 @@ import { Program } from "@/types";
 export const programs: Program[] = [
   {
     id: "alcohol-recovery",
+    image: "/images/programs/alcohol.jpeg",
     title: {
       en: "Alcohol Recovery",
       ne: "मद्यपान पुनर्स्थापना",
@@ -29,6 +30,7 @@ export const programs: Program[] = [
 
   {
     id: "drug-recovery",
+    image: "/images/programs/drug.jpg",
     title: {
       en: "Drug Recovery",
       ne: "लागूपदार्थ पुनर्स्थापना",
@@ -55,6 +57,7 @@ export const programs: Program[] = [
 
   {
     id: "mental-wellness",
+    image: "/images/programs/mental.jpg",
     title: {
       en: "Mental Wellness",
       ne: "मानसिक स्वास्थ्य",
@@ -81,6 +84,7 @@ export const programs: Program[] = [
 
   {
     id: "detox-programs",
+    image: "/images/programs/medical.jpg",
     title: {
       en: "Medical Detox",
       ne: "चिकित्सकीय डिटक्स",
@@ -107,6 +111,7 @@ export const programs: Program[] = [
 
   {
     id: "family-support",
+    image: "/images/programs/family.jpg",
     title: {
       en: "Family Support",
       ne: "पारिवारिक सहयोग",
@@ -133,6 +138,7 @@ export const programs: Program[] = [
 
   {
     id: "counseling",
+    image: "/images/programs/individual.jpg",
     title: {
       en: "Individual Counseling",
       ne: "व्यक्तिगत परामर्श",

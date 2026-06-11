@@ -17,6 +17,7 @@ import {
 import { programs } from "@/data/programs";
 import { useLanguage } from "@/context/LanguageContext";
 import { translations } from "@/lib/translations";
+import Image from "next/image";
 
 const iconMap: Record<string, React.ElementType> = {
   Heart,
@@ -84,10 +85,19 @@ function ProgramBlock({
         transition={{ duration: 0.8 }}
         className={`order-2 ${!isEven ? "lg:order-1" : "lg:order-2"}`}
       >
-        <div
-          className={`aspect-4/3 rounded-3xl bg-linear-to-br ${program.color} relative overflow-hidden flex items-center justify-center shadow-2xl`}
-          style={{ opacity: 0.9 }}
-        >
+        <div className="aspect-4/3 rounded-3xl relative overflow-hidden shadow-2xl">
+          {/* Background Image */}
+          <Image
+            src={program.image}
+            alt={program.title.en}
+            fill
+            className="object-cover"
+          />
+
+          {/* Dark overlay */}
+          <div className="absolute inset-0 bg-black/55" />
+
+          {/* Dot pattern */}
           <div
             className="absolute inset-0 opacity-20"
             style={{
@@ -96,18 +106,22 @@ function ProgramBlock({
               backgroundSize: "30px 30px",
             }}
           />
-          <div className="relative text-center text-white p-8">
-            <div className="w-24 h-24 rounded-3xl bg-white/20 flex items-center justify-center mx-auto mb-4 backdrop-blur-sm">
-              <Icon className="w-12 h-12" />
-            </div>
-            <p className="font-display font-bold text-2xl mb-2">
-              {program.title[language]}
-            </p>
-            <div className="inline-flex items-center gap-2 bg-white/20 rounded-full px-4 py-1.5">
-              <Clock className="w-4 h-4" />
-              <span className="text-sm font-medium">
-                {program.duration[language]}
-              </span>
+
+          {/* Content */}
+          <div className="relative h-full flex items-center justify-center text-center text-white p-8">
+            <div>
+              <div className="w-24 h-24 rounded-3xl bg-white/20 flex items-center justify-center mx-auto mb-4 backdrop-blur-sm">
+                <Icon className="w-12 h-12" />
+              </div>
+              <p className="font-display font-bold text-2xl mb-2">
+                {program.title[language]}
+              </p>
+              <div className="inline-flex items-center gap-2 bg-white/20 rounded-full px-4 py-1.5">
+                <Clock className="w-4 h-4" />
+                <span className="text-sm font-medium">
+                  {program.duration[language]}
+                </span>
+              </div>
             </div>
           </div>
         </div>

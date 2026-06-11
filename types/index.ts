@@ -9,6 +9,7 @@ export type LocalizedText = {
 };
 export interface Program {
   id: string;
+  image: string;
   title: LocalizedText;
   description: LocalizedText;
   duration: LocalizedText;
