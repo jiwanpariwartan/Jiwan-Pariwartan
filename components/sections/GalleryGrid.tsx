@@ -4,33 +4,60 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { X, ZoomIn } from "lucide-react";
+import Image from "next/image";
+import { useLanguage } from "@/context/LanguageContext";
+import { translations } from "@/lib/translations";
 
-const categories = ["All", "Gardens", "Therapy", "Wellness", "Living", "Dining"];
+const PLACEHOLDER = "/images/programs/family.jpg";
 
 const galleryItems = [
-  { id: 1, label: "Healing Gardens", category: "Gardens", bg: "from-green-200 to-teal-300", span: "col-span-2 row-span-2" },
-  { id: 2, label: "Individual Therapy Room", category: "Therapy", bg: "from-purple-200 to-violet-300", span: "" },
-  { id: 3, label: "Yoga & Meditation Studio", category: "Wellness", bg: "from-amber-200 to-orange-300", span: "" },
-  { id: 4, label: "Group Counseling Space", category: "Therapy", bg: "from-blue-200 to-indigo-300", span: "" },
-  { id: 5, label: "Private Rooms", category: "Living", bg: "from-rose-200 to-pink-300", span: "" },
-  { id: 6, label: "Nutrition & Dining Hall", category: "Dining", bg: "from-yellow-200 to-amber-300", span: "" },
-  { id: 7, label: "Meditation Garden", category: "Gardens", bg: "from-teal-200 to-cyan-300", span: "" },
-  { id: 8, label: "Art Therapy Room", category: "Therapy", bg: "from-violet-200 to-purple-300", span: "col-span-2" },
-  { id: 9, label: "Outdoor Recreation Area", category: "Wellness", bg: "from-lime-200 to-green-300", span: "" },
-  { id: 10, label: "Family Meeting Room", category: "Therapy", bg: "from-fuchsia-200 to-pink-300", span: "" },
-  { id: 11, label: "Library & Reading Room", category: "Living", bg: "from-sky-200 to-blue-300", span: "" },
-  { id: 12, label: "Communal Lounge", category: "Living", bg: "from-indigo-200 to-violet-300", span: "" },
+  {
+    id: 1,
+    category: "Gardens",
+    span: "col-span-2 row-span-2",
+    image: PLACEHOLDER,
+  },
+  { id: 2, category: "Therapy", span: "", image: PLACEHOLDER },
+  { id: 3, category: "Wellness", span: "", image: PLACEHOLDER },
+  { id: 4, category: "Therapy", span: "", image: PLACEHOLDER },
+  { id: 5, category: "Living", span: "", image: PLACEHOLDER },
+  { id: 6, category: "Dining", span: "", image: PLACEHOLDER },
+  { id: 7, category: "Gardens", span: "", image: PLACEHOLDER },
+  { id: 8, category: "Therapy", span: "col-span-2", image: PLACEHOLDER },
+  { id: 9, category: "Wellness", span: "", image: PLACEHOLDER },
+  { id: 10, category: "Therapy", span: "", image: PLACEHOLDER },
+  { id: 11, category: "Living", span: "", image: PLACEHOLDER },
+  { id: 12, category: "Living", span: "", image: PLACEHOLDER },
 ];
 
 export default function GalleryGrid() {
-  const [activeCategory, setActiveCategory] = useState("All");
+  const { language } = useLanguage();
+  const t = translations.gallery.galleryGrid;
+
+  const categories = [
+    t.categories.all,
+    t.categories.gardens,
+    t.categories.therapy,
+    t.categories.wellness,
+    t.categories.living,
+    t.categories.dining,
+  ];
+
+  const [activeCategory, setActiveCategory] = useState<string>(
+    t.categories.all.en,
+  );
   const [modal, setModal] = useState<(typeof galleryItems)[0] | null>(null);
-  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.05 });
+  const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.05 });
 
   const filtered =
-    activeCategory === "All"
+    activeCategory === t.categories.all.en
       ? galleryItems
       : galleryItems.filter((item) => item.category === activeCategory);
+
+  // Merge label translations into items
+  const labelMap = Object.fromEntries(
+    t.items.map((item) => [item.id, item.label]),
+  );
 
   return (
     <section className="py-20 bg-white">
@@ -39,21 +66,24 @@ export default function GalleryGrid() {
         <div className="flex flex-wrap gap-2 mb-10 justify-center">
           {categories.map((cat) => (
             <button
-              key={cat}
-              onClick={() => setActiveCategory(cat)}
+              key={cat.en}
+              onClick={() => setActiveCategory(cat.en)}
               className={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
-                activeCategory === cat
+                activeCategory === cat.en
                   ? "bg-purple-600 text-white shadow-lg shadow-purple-500/25"
                   : "bg-gray-100 text-gray-600 hover:bg-purple-50 hover:text-purple-700"
               }`}
             >
-              {cat}
+              {cat[language]}
             </button>
           ))}
         </div>
 
         {/* Masonry grid */}
-        <div ref={ref} className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 auto-rows-48">
+        <div
+          ref={ref}
+          className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 auto-rows-48"
+        >
           <AnimatePresence mode="popLayout">
             {filtered.map((item, i) => (
               <motion.div
@@ -64,17 +94,25 @@ export default function GalleryGrid() {
                 exit={{ opacity: 0, scale: 0.9 }}
                 transition={{ duration: 0.4, delay: i * 0.04 }}
                 onClick={() => setModal(item)}
-                className={`${item.span || ""} bg-gradient-to-br ${item.bg} rounded-2xl overflow-hidden group cursor-pointer relative min-h-48`}
+                className={`${item.span || ""} rounded-2xl overflow-hidden group cursor-pointer relative min-h-48`}
               >
-                <div className="absolute inset-0"
-                  style={{
-                    backgroundImage: "radial-gradient(circle, rgba(255,255,255,0.3) 1px, transparent 1px)",
-                    backgroundSize: "20px 20px",
-                  }}
+                {/* Background image */}
+                <Image
+                  src={item.image}
+                  alt={labelMap[item.id]?.en ?? ""}
+                  fill
+                  className="object-cover"
                 />
-                <div className="absolute inset-0 bg-gray-900/0 group-hover:bg-gray-900/30 transition-colors duration-400 flex items-end p-5">
+
+                {/* Dark overlay base */}
+                <div className="absolute inset-0 bg-black/30" />
+
+                {/* Hover overlay + label */}
+                <div className="absolute inset-0 bg-gray-900/0 group-hover:bg-gray-900/40 transition-colors duration-400 flex items-end p-5">
                   <div className="opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-4 group-hover:translate-y-0 flex items-center justify-between w-full">
-                    <p className="text-white font-semibold text-sm drop-shadow-lg">{item.label}</p>
+                    <p className="text-white font-semibold text-sm drop-shadow-lg">
+                      {labelMap[item.id]?.[language]}
+                    </p>
                     <div className="w-8 h-8 rounded-full bg-white/20 backdrop-blur flex items-center justify-center">
                       <ZoomIn className="w-4 h-4 text-white" />
                     </div>
@@ -101,21 +139,32 @@ export default function GalleryGrid() {
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.8, opacity: 0 }}
               onClick={(e) => e.stopPropagation()}
-              className={`bg-gradient-to-br ${modal.bg} w-full max-w-2xl aspect-video rounded-3xl relative overflow-hidden shadow-2xl`}
+              className="w-full max-w-2xl aspect-video rounded-3xl relative overflow-hidden shadow-2xl"
             >
-              <div
-                className="absolute inset-0"
-                style={{
-                  backgroundImage: "radial-gradient(circle, rgba(255,255,255,0.3) 1px, transparent 1px)",
-                  backgroundSize: "25px 25px",
-                }}
+              {/* Modal image */}
+              <Image
+                src={modal.image}
+                alt={labelMap[modal.id]?.en ?? ""}
+                fill
+                className="object-cover"
               />
-              <div className="absolute inset-0 bg-black/10 flex items-end p-8">
+
+              {/* Modal overlay */}
+              <div className="absolute inset-0 bg-black/40 flex items-end p-8">
                 <div>
-                  <p className="text-white font-display font-bold text-2xl drop-shadow-lg">{modal.label}</p>
-                  <p className="text-white/70 text-sm">{modal.category}</p>
+                  <p className="text-white font-display font-bold text-2xl drop-shadow-lg">
+                    {labelMap[modal.id]?.[language]}
+                  </p>
+                  <p className="text-white/70 text-sm">
+                    {
+                      categories.find((c) => c.en === modal.category)?.[
+                        language
+                      ]
+                    }
+                  </p>
                 </div>
               </div>
+
               <button
                 onClick={() => setModal(null)}
                 className="absolute top-4 right-4 w-10 h-10 rounded-full bg-black/30 backdrop-blur flex items-center justify-center text-white hover:bg-black/50 transition-colors"

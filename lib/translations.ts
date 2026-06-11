@@ -715,6 +715,80 @@ export const translations = {
     },
   },
 
+  // gallery
+  gallery: {
+    // gallery hero
+    galleryHero: {
+      badge: {
+        en: "Our Facility",
+        ne: "हाम्रो सुविधा",
+      },
+      title: {
+        part1: {
+          en: "Spaces Designed to",
+          ne: "निको पार्न र पुनर्स्थापनाका लागि",
+        },
+        highlight: {
+          en: "Heal & Restore",
+          ne: "डिजाइन गरिएका स्थानहरू",
+        },
+      },
+      description: {
+        en: "Every corner of Jiwan Pariwartan has been thoughtfully designed to promote calm, safety, and healing — a sanctuary where transformation begins.",
+        ne: "जीवन परिवर्तनको हरेक कुनालाई शान्ति, सुरक्षा र उपचारलाई बढावा दिन सोच-विचार गरी डिजाइन गरिएको छ — एक अभयारण्य जहाँ रूपान्तरण सुरु हुन्छ।",
+      },
+    },
+    // gallery grid
+    galleryGrid: {
+      categories: {
+        all: { en: "All", ne: "सबै" },
+        gardens: { en: "Gardens", ne: "बगैंचा" },
+        therapy: { en: "Therapy", ne: "थेरापी" },
+        wellness: { en: "Wellness", ne: "स्वास्थ्य" },
+        living: { en: "Living", ne: "आवास" },
+        dining: { en: "Dining", ne: "भोजन" },
+      },
+      items: [
+        { id: 1, label: { en: "Healing Gardens", ne: "उपचार बगैंचा" } },
+        {
+          id: 2,
+          label: { en: "Individual Therapy Room", ne: "व्यक्तिगत थेरापी कक्ष" },
+        },
+        {
+          id: 3,
+          label: { en: "Yoga & Meditation Studio", ne: "योग र ध्यान स्टुडियो" },
+        },
+        {
+          id: 4,
+          label: { en: "Group Counseling Space", ne: "समूह परामर्श स्थान" },
+        },
+        { id: 5, label: { en: "Private Rooms", ne: "निजी कोठाहरू" } },
+        {
+          id: 6,
+          label: { en: "Nutrition & Dining Hall", ne: "पोषण र भोजन हल" },
+        },
+        { id: 7, label: { en: "Meditation Garden", ne: "ध्यान बगैंचा" } },
+        { id: 8, label: { en: "Art Therapy Room", ne: "कला थेरापी कक्ष" } },
+        {
+          id: 9,
+          label: {
+            en: "Outdoor Recreation Area",
+            ne: "बाहिरी मनोरञ्जन क्षेत्र",
+          },
+        },
+        {
+          id: 10,
+          label: { en: "Family Meeting Room", ne: "पारिवारिक बैठक कक्ष" },
+        },
+        {
+          id: 11,
+          label: { en: "Library & Reading Room", ne: "पुस्तकालय र पठन कक्ष" },
+        },
+        { id: 12, label: { en: "Communal Lounge", ne: "साझा बैठक कक्ष" } },
+      ],
+    },
+  },
+
   // footer
   footer: {
     brand: {
