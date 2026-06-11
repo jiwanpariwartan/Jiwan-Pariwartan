@@ -4,9 +4,14 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import SectionTitle from "@/components/ui/SectionTitle";
 import { team } from "@/data/team";
+import { useLanguage } from "@/context/LanguageContext";
+import { translations } from "@/lib/translations";
 
 export default function TeamSection() {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.1 });
+  const { language } = useLanguage();
+
+  const t = translations.about.teamSection;
 
   return (
     <section className="py-24 lg:py-32 bg-white relative overflow-hidden">
@@ -15,10 +20,10 @@ export default function TeamSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-16">
           <SectionTitle
-            eyebrow="Our Experts"
-            title="The Team Behind"
-            highlight="Your Recovery"
-            subtitle="Our multidisciplinary team brings together decades of clinical experience, deep compassion, and personal commitment to your healing."
+            eyebrow={t.eyebrow[language]}
+            title={t.title.part1[language]}
+            highlight={t.title.highlight[language]}
+            subtitle={t.subtitle[language]}
           />
         </div>
 
@@ -28,11 +33,11 @@ export default function TeamSection() {
         >
           {team.map((member, i) => (
             <motion.div
-              key={member.name}
+              key={member.name[language]}
               initial={{ opacity: 0, y: 30 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: i * 0.1 }}
-              className="group bg-white rounded-3xl p-8 border border-gray-100 hover:border-purple-100 hover:shadow-xl hover:shadow-purple-100/20 transition-all duration-500"
+              className="group bg-white rounded-3xl p-8 border border-gray-300 hover:border-gray-500 hover:shadow-xl hover:shadow-purple-100/20 transition-all duration-500"
             >
               <div
                 className={`w-20 h-20 rounded-2xl bg-linear-to-br ${member.color} flex items-center justify-center mb-5 shadow-lg group-hover:scale-110 transition-transform duration-300`}
@@ -41,14 +46,14 @@ export default function TeamSection() {
                   {member.initials}
                 </span>
               </div>
-              <h3 className="font-display font-bold text-lg text-gray-900 mb-1">
-                {member.name}
+              <h3 className="font-bold text-lg text-gray-900 mb-1">
+                {member.name[language]}
               </h3>
               <p className="text-purple-600 text-sm font-semibold mb-3">
-                {member.role}
+                {member.role[language]}
               </p>
               <p className="text-gray-500 text-sm leading-relaxed">
-                {member.bio}
+                {member.bio[language]}
               </p>
             </motion.div>
           ))}

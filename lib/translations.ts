@@ -93,6 +93,271 @@ export const translations = {
     },
   },
 
+  // about
+  about: {
+    // about
+    aboutHero: {
+      badge: {
+        en: "Our Story",
+        ne: "हाम्रो कथा",
+      },
+
+      title: {
+        part1: {
+          en: "Transforming Lives Through",
+          ne: "जीवन परिवर्तन गर्दै",
+        },
+
+        highlight: {
+          en: "Compassionate Care",
+          ne: "सहानुभूतिपूर्ण सेवामार्फत",
+        },
+      },
+
+      description: {
+        en: "Jiwan Pariwartan was founded on a simple but powerful belief: that every person struggling with addiction deserves dignity, expert care, and a genuine chance at a new life.",
+        ne: "जीवन परिवर्तन एक सरल तर शक्तिशाली विश्वासका साथ स्थापना गरिएको हो: लतसँग संघर्ष गरिरहेका प्रत्येक व्यक्तिले सम्मान, विशेषज्ञ उपचार, र नयाँ जीवन सुरु गर्ने वास्तविक अवसर पाउनुपर्छ।",
+      },
+    },
+    // mission
+    missionVision: {
+      storyBadge: {
+        en: "Our Story",
+        ne: "हाम्रो कथा",
+      },
+
+      storyTitle: {
+        line1: {
+          en: "Founded on Hope,",
+          ne: "आशामा आधारित,",
+        },
+        highlight: {
+          en: "Built on Evidence",
+          ne: "प्रमाणमा निर्मित",
+        },
+      },
+
+      storyContent: {
+        paragraph1: {
+          en: "Jiwan Pariwartan — meaning 'Life Transformation' in Nepali — was established over 15 years ago by a group of physicians, psychologists, and recovered individuals who saw the desperate need for dignified, professional addiction care in Nepal.",
+          ne: "‘जीवन परिवर्तन’ — अर्थात् जीवनको सकारात्मक रूपान्तरण — नेपालमा सम्मानजनक र व्यावसायिक लत उपचार सेवाको आवश्यकता महसुस गर्ने चिकित्सक, मनोवैज्ञानिक तथा पुनर्स्थापित व्यक्तिहरूको समूहद्वारा १५ वर्षभन्दा बढी अघि स्थापना गरिएको थियो।",
+        },
+
+        paragraph2: {
+          en: "What began as a small residential program in Kathmandu has grown into Nepal's most comprehensive rehabilitation center, offering a full continuum of care from medical detox through long-term aftercare support.",
+          ne: "काठमाडौंमा सानो आवासीय कार्यक्रमका रूपमा सुरु भएको यो संस्था आज नेपालकै अग्रणी पुनर्स्थापना केन्द्र बनेको छ, जसले मेडिकल डिटक्सदेखि दीर्घकालीन पुनर्सहयोगसम्म सम्पूर्ण सेवा प्रदान गर्दछ।",
+        },
+
+        paragraph3: {
+          en: "We have walked alongside over 2,000 individuals and their families, witnessing transformations that have reaffirmed our belief in the power of compassionate, expert care.",
+          ne: "हामीले २,००० भन्दा बढी व्यक्ति तथा परिवारहरूसँग यात्रा गर्दै जीवन परिवर्तनका प्रेरणादायी उदाहरणहरू देखेका छौं, जसले सहानुभूतिपूर्ण र विशेषज्ञ सेवाको शक्तिप्रति हाम्रो विश्वासलाई अझ बलियो बनाएको छ।",
+        },
+      },
+
+      centerInfo: {
+        title: {
+          en: "Jiwan Pariwartan",
+          ne: "जीवन परिवर्तन",
+        },
+
+        subtitle: {
+          en: "Rehabilitation & Recovery Center",
+          ne: "पुनर्स्थापना तथा रिकभरी केन्द्र",
+        },
+
+        stats: {
+          years: {
+            value: {
+              en: "15+",
+              np: "१५+",
+            },
+            label: {
+              en: "Years",
+              ne: "वर्ष",
+            },
+          },
+
+          recovered: {
+            value: {
+              en: "1000+",
+              np: "१०००+",
+            },
+            label: {
+              en: "Recovered",
+              ne: "पुनर्स्थापित",
+            },
+          },
+
+          success: {
+            value: {
+              en: "96%",
+              np: "९६%",
+            },
+            label: {
+              en: "Success",
+              ne: "सफलता",
+            },
+          },
+
+          support: {
+            value: {
+              en: "24/7",
+              np: "२४/७",
+            },
+            label: {
+              en: "Support",
+              ne: "सहयोग",
+            },
+          },
+        },
+      },
+
+      cards: {
+        mission: {
+          title: {
+            en: "Our Mission",
+            ne: "हाम्रो उद्देश्य",
+          },
+
+          content: {
+            en: "To provide compassionate, evidence-based rehabilitation services that address the physical, psychological, social, and spiritual dimensions of addiction and mental health — empowering individuals to reclaim their lives and fulfill their highest potential.",
+            ne: "शारीरिक, मानसिक, सामाजिक तथा आध्यात्मिक पक्षलाई समेट्ने सहानुभूतिपूर्ण र प्रमाणमा आधारित पुनर्स्थापना सेवा प्रदान गर्दै व्यक्तिहरूलाई आफ्नो जीवन पुनः निर्माण गर्न र आफ्नो सर्वोच्च सम्भावना हासिल गर्न सक्षम बनाउनु।",
+          },
+        },
+
+        vision: {
+          title: {
+            en: "Our Vision",
+            ne: "हाम्रो दृष्टिकोण",
+          },
+
+          content: {
+            en: "A Nepal where every person affected by addiction or mental illness has access to world-class, dignified care — and where recovery is celebrated as a triumph of the human spirit, not stigmatized as a personal failing.",
+            ne: "यस्तो नेपालको निर्माण जहाँ लत वा मानसिक समस्याबाट प्रभावित प्रत्येक व्यक्तिले विश्वस्तरीय र सम्मानजनक सेवा प्राप्त गर्न सकून्, र जहाँ पुनर्स्थापनालाई कमजोरी होइन मानव आत्माको विजयको रूपमा सम्मान गरियोस्।",
+          },
+        },
+
+        philosophy: {
+          title: {
+            en: "Our Philosophy",
+            ne: "हाम्रो दर्शन",
+          },
+
+          content: {
+            en: "We believe recovery is possible for everyone. By treating the whole person — not just the addiction — and involving the family system in healing, we create conditions for profound and lasting transformation.",
+            ne: "हामी विश्वास गर्छौं कि पुनर्स्थापना सबैका लागि सम्भव छ। केवल लत होइन, सम्पूर्ण व्यक्तित्वलाई उपचार गर्दै र परिवारलाई पनि उपचार प्रक्रियामा सहभागी गराउँदै हामी दीर्घकालीन परिवर्तनको आधार निर्माण गर्छौं।",
+          },
+        },
+      },
+    },
+    // timeline
+    timelineSection: {
+      badge: {
+        en: "Our Journey",
+        ne: "हाम्रो यात्रा",
+      },
+      title: {
+        part1: {
+          en: "15 Years of",
+          ne: "१५ वर्षको",
+        },
+        highlight: {
+          en: "Transformation",
+          ne: "रूपान्तरण",
+        },
+      },
+      milestones: [
+        {
+          year: {
+            en: "2009",
+            ne: "2066",
+          },
+          title: { en: "Founded", ne: "स्थापना" },
+          description: {
+            en: "Jiwan Pariwartan opened its doors with a small residential program and a dedicated team of 8 professionals.",
+            ne: "जीवन परिवर्तनले एउटा साना आवासीय कार्यक्रम र ८ समर्पित पेशाविद्हरूको टोलीसँग आफ्नो ढोका खोल्यो।",
+          },
+        },
+        {
+          year: {
+            en: "2012",
+            ne: "2068",
+          },
+          title: { en: "Expanded Programs", ne: "कार्यक्रम विस्तार" },
+          description: {
+            en: "Launched family therapy and aftercare support programs, recognizing healing extends beyond the individual.",
+            ne: "पारिवारिक थेरापी र उपचारपछिको सहायता कार्यक्रमहरू सुरु गरियो, स्वास्थ्य लाभ व्यक्तिभन्दा परसम्म फैलिन्छ भन्ने मान्यतामा।",
+          },
+        },
+        {
+          year: {
+            en: "2015",
+            ne: "2071",
+          },
+          title: { en: "Medical Detox Unit", ne: "मेडिकल डिटक्स एकाइ" },
+          description: {
+            en: "Established a fully equipped medical detoxification unit with round-the-clock clinical supervision.",
+            ne: "चौबीसै घण्टे क्लिनिकल निगरानीसहित पूर्ण सुसज्जित मेडिकल डिटक्सिफिकेसन एकाइ स्थापना गरियो।",
+          },
+        },
+        {
+          year: {
+            en: "2018",
+            ne: "2074",
+          },
+          title: { en: "Holistic Integration", ne: "समग्र एकीकरण" },
+          description: {
+            en: "Integrated yoga therapy, mindfulness, and nutritional counseling into all treatment programs.",
+            ne: "सबै उपचार कार्यक्रमहरूमा योग थेरापी, माइन्डफुलनेस, र पोषण परामर्श समावेश गरियो।",
+          },
+        },
+        {
+          year: {
+            en: "2021",
+            ne: "2077",
+          },
+          title: { en: "1000 Lives Milestone", ne: "१००० जीवन उपलब्धि" },
+          description: {
+            en: "Celebrated guiding over 1,000 individuals and families through successful recovery journeys.",
+            ne: "१,००० भन्दा बढी व्यक्ति र परिवारहरूलाई सफल पुनर्स्थापना यात्रामा मार्गदर्शन गरेको उपलब्धि मनाइयो।",
+          },
+        },
+        {
+          year: {
+            en: "2024",
+            ne: "2080",
+          },
+          title: { en: "Today & Beyond", ne: "आज र भविष्य" },
+          description: {
+            en: "Continuing to expand services and reach, driven by our commitment to making recovery accessible to all.",
+            ne: "पुनर्स्थापनालाई सबैका लागि सुलभ बनाउने प्रतिबद्धताद्वारा संचालित भई सेवा र पहुँच विस्तार जारी छ।",
+          },
+        },
+      ],
+    },
+    // team section
+    teamSection: {
+      eyebrow: {
+        en: "Our Experts",
+        ne: "हाम्रा विशेषज्ञहरू",
+      },
+      title: {
+        part1: {
+          en: "The Team Behind",
+          ne: "तपाईंको पुनर्स्थापनाको",
+        },
+        highlight: {
+          en: "Your Recovery",
+          ne: "पछाडिको टोली",
+        },
+      },
+      subtitle: {
+        en: "Our multidisciplinary team brings together decades of clinical experience, deep compassion, and personal commitment to your healing.",
+        ne: "हाम्रो बहु-विषयक टोलीले दशकौंको क्लिनिकल अनुभव, गहिरो करुणा, र तपाईंको उपचारप्रति व्यक्तिगत प्रतिबद्धता एकसाथ ल्याउँछ।",
+      },
+    },
+  },
+
   // stats
   stats: {
     livesTransformed: {

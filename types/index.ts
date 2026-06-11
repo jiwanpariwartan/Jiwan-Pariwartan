@@ -32,13 +32,13 @@ export type FAQItem = {
   answer: { en: string; ne: string };
 };
 
-export interface TeamMember {
-  name: string;
-  role: string;
-  bio: string;
+export type TeamMember = {
+  name: { en: string; ne: string };
+  role: { en: string; ne: string };
+  bio: { en: string; ne: string };
   initials: string;
   color: string;
-}
+};
 
 export interface Stat {
   value: string;
