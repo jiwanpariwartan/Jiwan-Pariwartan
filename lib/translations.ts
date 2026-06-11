@@ -449,6 +449,125 @@ export const translations = {
       ne: "जीवन परिवर्तनमा पुनर्स्थापनाको मार्गमा हिँडेकाहरूबाट सुन्नुहोस्।",
     },
   },
+
+  // footer
+  footer: {
+    brand: {
+      title: {
+        en: "Jiwan Pariwartan",
+        ne: "जीवन परिवर्तन",
+      },
+      subtitle: {
+        en: "Rehabilitation Center",
+        ne: "पुनर्स्थापना केन्द्र",
+      },
+      description: {
+        en: "Nepal's premier rehabilitation center, offering compassionate, evidence-based addiction treatment and mental wellness care in a healing environment.",
+        ne: "नेपालको अग्रणी पुनर्स्थापना केन्द्र, जहाँ सहानुभूतिपूर्ण र प्रमाणमा आधारित उपचार तथा मानसिक स्वास्थ्य सेवाहरू प्रदान गरिन्छ।",
+      },
+    },
+
+    sections: {
+      quickLinks: {
+        en: "Quick Links",
+        ne: "द्रुत लिंकहरू",
+      },
+      programs: {
+        en: "Our Programs",
+        ne: "हाम्रा कार्यक्रमहरू",
+      },
+      contact: {
+        en: "Contact Us",
+        ne: "सम्पर्क गर्नुहोस्",
+      },
+    },
+
+    links: {
+      home: {
+        en: "Home",
+        ne: "गृहपृष्ठ",
+      },
+      about: {
+        en: "About Us",
+        ne: "हाम्रो बारेमा",
+      },
+      programs: {
+        en: "Our Programs",
+        ne: "हाम्रा कार्यक्रमहरू",
+      },
+      gallery: {
+        en: "Gallery",
+        ne: "ग्यालरी",
+      },
+      contact: {
+        en: "Contact",
+        ne: "सम्पर्क",
+      },
+    },
+
+    programLinks: {
+      alcohol: {
+        en: "Alcohol Recovery",
+        ne: "मद्यपान पुनर्स्थापना",
+      },
+      drug: {
+        en: "Drug Recovery",
+        ne: "लागूपदार्थ पुनर्स्थापना",
+      },
+      wellness: {
+        en: "Mental Wellness",
+        ne: "मानसिक स्वास्थ्य",
+      },
+      detox: {
+        en: "Medical Detox",
+        ne: "मेडिकल डिटक्स",
+      },
+      family: {
+        en: "Family Support",
+        ne: "पारिवारिक सहयोग",
+      },
+      counseling: {
+        en: "Individual Counseling",
+        ne: "व्यक्तिगत परामर्श",
+      },
+    },
+
+    contact: {
+      emergency: {
+        en: "Emergency",
+        ne: "आपतकालीन",
+      },
+
+      phone: { en: "+977-9805667436", ne: "+९७७-९८०५६६७४३६" },
+
+      helpline: {
+        en: "24/7 Helpline",
+        ne: "२४/७ हेल्पलाइन",
+      },
+
+      location: {
+        en: "Kathmandu, Bagmati Province, Nepal",
+        ne: "काठमाडौं, बागमती प्रदेश, नेपाल",
+      },
+    },
+
+    bottom: {
+      copyright: {
+        en: "All rights reserved.",
+        ne: "सर्वाधिकार सुरक्षित।",
+      },
+
+      madeWith: {
+        en: "Made with",
+        ne: "निर्माण गरिएको",
+      },
+
+      healing: {
+        en: "for healing & recovery in Nepal",
+        ne: "नेपालमा उपचार र पुनर्स्थापनाका लागि",
+      },
+    },
+  },
 } as const;
 
 export type TranslationKey = typeof translations;
