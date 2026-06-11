@@ -789,6 +789,163 @@ export const translations = {
     },
   },
 
+  // contact
+  contact: {
+    // contact hero
+    contactHero: {
+      badge: {
+        en: "Get In Touch",
+        ne: "सम्पर्क गर्नुहोस्",
+      },
+
+      title: {
+        part1: {
+          en: "Your Recovery Starts",
+          ne: "तपाईंको पुनर्स्थापनाको यात्रा",
+        },
+
+        highlight: {
+          en: "With One Call",
+          ne: "एउटा फोनबाट सुरु हुन्छ",
+        },
+      },
+
+      description: {
+        en: "Reaching out is the first and most important step. Our compassionate team is available 24/7 for free, confidential consultations.",
+        ne: "सम्पर्क गर्नु नै पहिलो र सबैभन्दा महत्त्वपूर्ण कदम हो। हाम्रो सहानुभूतिपूर्ण टोली निःशुल्क र गोप्य परामर्शका लागि २४/७ उपलब्ध छ।",
+      },
+
+      callButton: {
+        en: "Call 24/7 Helpline",
+        ne: "२४/७ हेल्पलाइनमा फोन गर्नुहोस्",
+      },
+
+      confidential: {
+        en: "Completely Confidential",
+        ne: "पूर्ण रूपमा गोप्य",
+      },
+    },
+    // section
+
+    contactSection: {
+      heading: {
+        en: "Reach Out to Us",
+        ne: "हामीसँग सम्पर्क गर्नुहोस्",
+      },
+
+      description: {
+        en: "We understand that reaching out for help takes courage. Our team is here to make that step as easy and comfortable as possible.",
+        ne: "हामी बुझ्छौं कि सहयोगका लागि सम्पर्क गर्नु साहसिक कदम हो। हाम्रो टोली यो यात्रालाई सकेसम्म सहज र आरामदायी बनाउन यहाँ छ।",
+      },
+
+      contactInfo: {
+        phone: {
+          title: {
+            en: "Phone & Helpline",
+            ne: "फोन तथा हेल्पलाइन",
+          },
+          office: {
+            en: "+977-9805667436",
+            ne: "+९७७-९८०५६६७४३६ (कार्यालय)",
+          },
+          helpline: {
+            en: "+977-98XXXXXXXX (24/7 Helpline)",
+            ne: "+977-98XXXXXXXX (२४/७ हेल्पलाइन)",
+          },
+        },
+
+        email: {
+          title: {
+            en: "Email",
+            ne: "इमेल",
+          },
+        },
+
+        location: {
+          title: {
+            en: "Location",
+            ne: "ठेगाना",
+          },
+          city: {
+            en: "Kathmandu, Bagmati Province",
+            ne: "काठमाडौं, बागमती प्रदेश",
+          },
+          country: {
+            en: "Nepal",
+            ne: "नेपाल",
+          },
+        },
+
+        officeHours: {
+          title: {
+            en: "Office Hours",
+            ne: "कार्यालय समय",
+          },
+          weekdays: {
+            en: "Mon–Fri: 8:00 AM – 6:00 PM",
+            ne: "सोम–शुक्र: बिहान ८:०० – साँझ ६:००",
+          },
+          helpline: {
+            en: "Helpline: Available 24/7",
+            ne: "हेल्पलाइन: २४/७ उपलब्ध",
+          },
+        },
+
+        whatsapp: {
+          title: {
+            en: "WhatsApp",
+            ne: "व्हाट्सएप",
+          },
+          response: {
+            en: "Quick response guaranteed",
+            ne: "छिटो प्रतिक्रिया सुनिश्चित",
+          },
+        },
+      },
+
+      emergency: {
+        title: {
+          en: "Emergency Support",
+          ne: "आपतकालीन सहायता",
+        },
+
+        description: {
+          en: "If you or someone you know is in crisis, please call our emergency line immediately.",
+          ne: "यदि तपाईं वा तपाईंले चिन्नुभएको कोही संकटमा हुनुहुन्छ भने, कृपया तुरुन्तै हाम्रो आपतकालीन नम्बरमा सम्पर्क गर्नुहोस्।",
+        },
+
+        button: {
+          en: "Emergency: +977-9805667436",
+          ne: "आपतकालीन: +९७७-९८०५६६७४३६",
+        },
+      },
+
+      map: {
+        location: {
+          en: "Kathmandu, Nepal",
+          ne: "काठमाडौं, नेपाल",
+        },
+
+        placeholder: {
+          en: "Map will load here",
+          ne: "नक्सा यहाँ देखाइनेछ",
+        },
+      },
+
+      form: {
+        title: {
+          en: "Send Us a Message",
+          ne: "हामीलाई सन्देश पठाउनुहोस्",
+        },
+
+        description: {
+          en: "Fill out the form below and a member of our team will reach out to you within 24 hours.",
+          ne: "तलको फारम भर्नुहोस्, र हाम्रो टोलीको एक सदस्यले २४ घण्टाभित्र तपाईंलाई सम्पर्क गर्नेछ।",
+        },
+      },
+    },
+  },
+
   // footer
   footer: {
     brand: {
