@@ -4,7 +4,16 @@ import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
-import { ChevronDown, ChevronLeft, ChevronRight, Phone, Star, Shield, Heart, Home } from "lucide-react";
+import {
+  ChevronDown,
+  ChevronLeft,
+  ChevronRight,
+  Phone,
+  Star,
+  Shield,
+  Heart,
+  Home,
+} from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
 import { translations } from "@/lib/translations";
 
@@ -61,7 +70,8 @@ export default function HeroSection() {
   const slide = t.slides[current];
 
   return (
-    <section className="relative min-h-screen flex flex-col overflow-hidden">
+    // ✅ Changed: min-h-screen → h-screen so the section never grows/shrinks
+    <section className="relative h-screen flex flex-col overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0">
         <div
@@ -112,8 +122,10 @@ export default function HeroSection() {
       </div>
 
       {/* Main content */}
-      <div className="relative z-10 flex-1 flex items-center">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-32 lg:py-40">
+      {/* ✅ Changed: flex-1 + items-center with fixed py removed in favour of h-full so it
+          never contributes to the section growing beyond h-screen */}
+      <div className="relative z-10 flex-1 flex items-center min-h-0">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Text */}
             <div>
