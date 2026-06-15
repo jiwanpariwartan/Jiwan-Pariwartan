@@ -1,10 +1,10 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Phone } from "lucide-react";
+import { Menu, X, Phone, ChevronDown } from "lucide-react";
 import Image from "next/image";
 import logo from "../../public/images/logo.jpeg";
 import { useLanguage } from "@/context/LanguageContext";
@@ -19,9 +19,17 @@ const navHrefs: Record<(typeof navKeys)[number], string> = {
   contact: "/contact",
 };
 
+const phoneNumbers = [
+  { label: "Nepal 1", number: "980-5667436", href: "tel:+9779805667436" },
+  { label: "Nepal 2", number: "984-5876337", href: "tel:+9779845876337" },
+  { label: "Nepal 3", number: "984-1556130", href: "tel:+9779841556130" },
+];
+
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [phoneOpen, setPhoneOpen] = useState(false);
+  const phoneRef = useRef<HTMLDivElement>(null);
   const pathname = usePathname();
   const { language, toggleLanguage } = useLanguage();
 
@@ -33,6 +41,17 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Close dropdown on outside click
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      if (phoneRef.current && !phoneRef.current.contains(e.target as Node)) {
+        setPhoneOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
   const isHome = pathname === "/";
   const isLight = scrolled || !isHome;
 
@@ -42,7 +61,7 @@ export default function Header() {
         initial={{ y: -80, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+        className={`fixed top-9.5 left-0 right-0 z-50 transition-all duration-500 ${
           isLight
             ? "bg-white/95 backdrop-blur-xl shadow-lg shadow-purple-100/30 border-b border-purple-100/50"
             : "bg-transparent"
@@ -130,7 +149,7 @@ export default function Header() {
                       : "opacity-50"
                   }`}
                 >
-                  EN
+                  ENGLISH
                 </span>
                 <span
                   className={`px-2 py-1 rounded-full transition-all duration-200 ${
@@ -141,21 +160,67 @@ export default function Header() {
                       : "opacity-50"
                   }`}
                 >
-                  ने
+                  नेपाली
                 </span>
               </button>
 
-              <a
-                href="tel:+977-9805667436"
-                className={`flex items-center gap-2 text-sm font-medium transition-colors duration-300 ${
-                  isLight
-                    ? "text-gray-600 hover:text-purple-700"
-                    : "text-white/80 hover:text-white"
-                }`}
-              >
-                <Phone className="w-4 h-4" />
-                <span>{t.phone[language]}</span>
-              </a>
+              {/* Phone dropdown */}
+              <div ref={phoneRef} className="relative">
+                <button
+                  onClick={() => setPhoneOpen((prev) => !prev)}
+                  className={`flex items-center gap-1.5 text-sm font-medium transition-colors duration-300 ${
+                    isLight
+                      ? "text-gray-600 hover:text-purple-700"
+                      : "text-white/80 hover:text-white"
+                  }`}
+                >
+                  <Phone className="w-4 h-4" />
+                  <span>{t.phone[language]}</span>
+                  <ChevronDown
+                    className={`w-3.5 h-3.5 transition-transform duration-200 ${
+                      phoneOpen ? "rotate-180" : ""
+                    }`}
+                  />
+                </button>
+
+                <AnimatePresence>
+                  {phoneOpen && (
+                    <motion.div
+                      initial={{ opacity: 0, y: 6, scale: 0.97 }}
+                      animate={{ opacity: 1, y: 0, scale: 1 }}
+                      exit={{ opacity: 0, y: 6, scale: 0.97 }}
+                      transition={{ duration: 0.18, ease: "easeOut" }}
+                      className="absolute right-0 top-full mt-2 w-48 rounded-2xl bg-white shadow-xl shadow-purple-100/40 border border-purple-100/60 overflow-hidden z-50"
+                    >
+                      {phoneNumbers.map(({ label, number, href }, i) => (
+                        <a
+                          key={href}
+                          href={href}
+                          onClick={() => setPhoneOpen(false)}
+                          className={`flex items-center gap-3 px-4 py-3 text-sm transition-colors hover:bg-purple-50 ${
+                            i !== phoneNumbers.length - 1
+                              ? "border-b border-purple-50"
+                              : ""
+                          }`}
+                        >
+                          <div className="w-7 h-7 rounded-full bg-purple-100 flex items-center justify-center shrink-0">
+                            <Phone className="w-3.5 h-3.5 text-purple-600" />
+                          </div>
+                          <div className="flex flex-col">
+                            <span className="text-[0.65rem] text-gray-400 font-medium leading-none mb-0.5">
+                              {label}
+                            </span>
+                            <span className="text-gray-800 font-semibold tracking-wide">
+                              {number}
+                            </span>
+                          </div>
+                        </a>
+                      ))}
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
+
               <Link
                 href="/contact"
                 className="px-5 py-2.5 rounded-full text-sm font-semibold bg-linear-to-r from-purple-600 to-violet-500 text-white shadow-lg shadow-purple-500/25 hover:shadow-purple-500/40 hover:scale-105 transition-all duration-300"
@@ -192,7 +257,7 @@ export default function Header() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-x-0 top-18 z-40 lg:hidden"
+            className="fixed inset-x-0 top-27.5 z-40 lg:hidden"
           >
             <div className="mx-4 rounded-2xl bg-white/95 backdrop-blur-xl shadow-2xl shadow-purple-200/30 border border-purple-100/50 p-4">
               <nav className="flex flex-col gap-1 mb-4">
@@ -237,13 +302,27 @@ export default function Header() {
                   </span>
                 </button>
 
-                <a
-                  href="tel:+977-9805667436"
-                  className="flex items-center gap-2 px-4 py-3 rounded-xl text-sm font-medium text-gray-600 hover:bg-gray-50"
-                >
-                  <Phone className="w-4 h-4 text-purple-600" />
-                  {t.phone[language]}
-                </a>
+                {/* All 3 numbers in mobile menu */}
+                <div className="flex flex-col gap-1">
+                  {phoneNumbers.map(({ label, number, href }) => (
+                    <a
+                      key={href}
+                      href={href}
+                      className="flex items-center gap-3 px-4 py-2.5 rounded-xl text-sm font-medium text-gray-600 hover:bg-purple-50 hover:text-purple-700 transition-colors"
+                    >
+                      <Phone className="w-4 h-4 text-purple-600 shrink-0" />
+                      <div className="flex flex-col">
+                        <span className="text-[0.65rem] text-gray-400 leading-none mb-0.5">
+                          {label}
+                        </span>
+                        <span className="font-semibold tracking-wide">
+                          {number}
+                        </span>
+                      </div>
+                    </a>
+                  ))}
+                </div>
+
                 <Link
                   href="/contact"
                   onClick={() => setMobileOpen(false)}

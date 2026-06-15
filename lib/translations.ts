@@ -1,4 +1,12 @@
 export const translations = {
+  // PREHEADER
+  preHeader: {
+    tagline: {
+      en: "Reach us anytime — we're here to help.",
+      ne: "हामीलाई जुनसुकै बेला सम्पर्क गर्नुहोस् — हामी सहयोगका लागि यहाँ छौं।",
+    },
+  },
+
   // header
   header: {
     nav: {
@@ -70,11 +78,11 @@ export const translations = {
     whyChooseUs: {
       title: { en: "Why Choose Us", ne: "हामीलाई किन छान्ने" },
       items: [
-        { en: "Evidence-based treatment", ne: "प्रमाण-आधारित उपचार" },
-        { en: "Holistic healing approach", ne: "समग्र उपचार पद्धति" },
-        { en: "Family-centered care", ne: "परिवार-केन्द्रित सेवा" },
+        { en: "EVIDENCE-based treatment", ne: "प्रमाण-आधारित उपचार" },
+        { en: "HOLISTIC healing approach", ne: "समग्र उपचार पद्धति" },
+        { en: "FAMILY-centered care", ne: "परिवार-केन्द्रित सेवा" },
         {
-          en: "Aftercare & alumni support",
+          en: "AFTERCARE & alumni support",
           ne: "पश्चात सेवा र पूर्व-विद्यार्थी सहयोग",
         },
       ],

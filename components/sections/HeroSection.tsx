@@ -19,15 +19,15 @@ import { translations } from "@/lib/translations";
 
 const slideImages = [
   {
-    image: "/images/hero-bg-1.jpg",
+    image: "/images/hero2.jpeg",
     gradient: "from-[#0b1a2e] via-[#1c2c4e] to-[#0e2140]",
   },
   {
-    image: "/images/hero-bg-2.jpg",
+    image: "/images/hero1.jpeg",
     gradient: "from-[#0a1628] via-[#1a2a4a] to-[#0d1f3c]",
   },
   {
-    image: "/images/hero-bg-3.jpg",
+    image: "/images/hero6.jpeg",
     gradient: "from-[#1a0a2e] via-[#2a1040] to-[#150820]",
   },
 ];
@@ -70,14 +70,13 @@ export default function HeroSection() {
   const slide = t.slides[current];
 
   return (
-    // ✅ Changed: min-h-screen → h-screen so the section never grows/shrinks
-    <section className="relative h-screen flex flex-col overflow-hidden">
+    // On mobile: min-h-screen so content can expand. On desktop: h-screen fixed.
+    <section className="relative min-h-screen lg:h-screen flex flex-col overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0">
         <div
           className={`absolute inset-0 bg-linear-to-br ${slideImages[current].gradient}`}
         />
-
         <AnimatePresence initial={false}>
           <motion.div
             key={current}
@@ -98,7 +97,6 @@ export default function HeroSection() {
             />
           </motion.div>
         </AnimatePresence>
-
         <div className="absolute inset-0 bg-black/55" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(168,85,247,0.12),transparent_45%)]" />
       </div>
@@ -121,20 +119,18 @@ export default function HeroSection() {
         />
       </div>
 
-      {/* Main content */}
-      {/* ✅ Changed: flex-1 + items-center with fixed py removed in favour of h-full so it
-          never contributes to the section growing beyond h-screen */}
-      <div className="relative z-10 flex-1 flex items-center min-h-0">
+      {/* Main content — pt accounts for preheader (38px) + header (~72px) = 110px */}
+      <div className="relative z-10 flex-1 flex items-center min-h-0 pt-[110px] pb-8 lg:pb-0">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Text */}
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+            {/* ── Text column ── */}
             <div>
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
               >
-                <span className="inline-flex items-center gap-2 text-xs font-bold tracking-[0.2em] uppercase text-purple-300 bg-purple-500/15 border border-purple-500/20 px-4 py-2 rounded-full mb-6">
+                <span className="inline-flex items-center gap-2 text-xs font-bold tracking-[0.2em] uppercase text-purple-300 bg-purple-500/15 border border-purple-500/20 px-4 py-2 rounded-full mb-5">
                   <span className="w-1.5 h-1.5 rounded-full bg-purple-400 animate-pulse" />
                   {t.badge[language]}
                 </span>
@@ -148,10 +144,10 @@ export default function HeroSection() {
                   exit={{ opacity: 0, y: -20 }}
                   transition={{ duration: 0.7, ease: "easeOut" }}
                 >
-                  <h1 className="font-display font-bold text-5xl sm:text-6xl lg:text-7xl xl:text-8xl leading-[1.05] text-white mb-2">
+                  <h1 className="font-display font-bold text-4xl sm:text-5xl lg:text-6xl xl:text-7xl leading-[1.05] text-white mb-2">
                     {slide.headline[language]}
                   </h1>
-                  <h1 className="font-display font-bold text-5xl sm:text-6xl lg:text-7xl xl:text-8xl leading-[1.05] mb-6">
+                  <h1 className="font-display font-bold text-4xl sm:text-5xl lg:text-6xl xl:text-7xl leading-[1.05] mb-5">
                     <span className="gradient-text-purple">
                       {slide.sub[language]}
                     </span>
@@ -166,7 +162,7 @@ export default function HeroSection() {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0 }}
                   transition={{ duration: 0.6, delay: 0.1 }}
-                  className="text-base sm:text-lg text-gray-300 leading-relaxed max-w-lg mb-10"
+                  className="text-sm sm:text-base lg:text-lg text-gray-300 leading-relaxed max-w-lg mb-8"
                 >
                   {slide.description[language]}
                 </motion.p>
@@ -176,17 +172,17 @@ export default function HeroSection() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.4 }}
-                className="flex flex-col sm:flex-row gap-4"
+                className="flex flex-col sm:flex-row gap-3"
               >
                 <Link
                   href="/contact"
-                  className="inline-flex items-center justify-center px-8 py-4 rounded-full font-semibold text-base bg-linear-to-r from-purple-600 to-violet-500 text-white shadow-2xl shadow-purple-600/40 hover:shadow-purple-600/60 hover:scale-105 transition-all duration-300"
+                  className="inline-flex items-center justify-center px-7 py-3.5 rounded-full font-semibold text-sm sm:text-base bg-linear-to-r from-purple-600 to-violet-500 text-white shadow-2xl shadow-purple-600/40 hover:shadow-purple-600/60 hover:scale-105 transition-all duration-300"
                 >
                   {t.ctaPrimary[language]}
                 </Link>
                 <a
-                  href="tel:+977-98XXXXXXXX"
-                  className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full font-semibold text-base text-white border border-white/25 bg-white/8 backdrop-blur hover:bg-white/15 hover:border-white/40 transition-all duration-300"
+                  href="tel:+977-9805667436"
+                  className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full font-semibold text-sm sm:text-base text-white border border-white/25 bg-white/8 backdrop-blur hover:bg-white/15 hover:border-white/40 transition-all duration-300"
                 >
                   <Phone className="w-4 h-4" />
                   {t.ctaPhone[language]}
@@ -198,7 +194,7 @@ export default function HeroSection() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.8 }}
-                className="flex items-center gap-2 mt-10"
+                className="flex items-center gap-2 mt-8"
               >
                 {slideImages.map((_, i) => (
                   <button
@@ -215,64 +211,118 @@ export default function HeroSection() {
               </motion.div>
             </div>
 
-            {/* Floating cards */}
-            <div className="hidden lg:flex flex-col gap-4 items-end">
-              {t.floatingCards.map((card, i) => {
-                const Icon = cardIcons[i];
-                return (
-                  <motion.div
-                    key={i}
-                    initial={{ opacity: 0, x: 60 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.7, delay: 0.5 + cardDelays[i] }}
-                    className="animate-float"
-                    style={{ animationDelay: `${i * 2}s` }}
-                  >
-                    <div
-                      className={`glass flex items-center gap-4 px-6 py-4 rounded-2xl bg-linear-to-r ${cardColors[i]} shadow-2xl min-w-52`}
+            {/* ── Right column: floating cards ── */}
+            <div className="flex flex-col gap-3 items-stretch lg:items-end">
+              {/* On mobile: 2-col grid of compact stat cards */}
+              <div className="grid grid-cols-2 gap-3 lg:hidden">
+                {t.floatingCards.map((card, i) => {
+                  const Icon = cardIcons[i];
+                  return (
+                    <motion.div
+                      key={i}
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.5, delay: 0.3 + i * 0.1 }}
+                      className={`flex items-center gap-3 px-4 py-3 rounded-2xl bg-linear-to-r ${cardColors[i]} shadow-lg`}
                     >
-                      <div className="w-12 h-12 rounded-xl bg-white/15 flex items-center justify-center shrink-0">
-                        <Icon className="w-6 h-6 text-white" />
+                      <div className="w-9 h-9 rounded-xl bg-white/15 flex items-center justify-center shrink-0">
+                        <Icon className="w-4.5 h-4.5 text-white" />
                       </div>
-                      <div>
-                        <p className="text-white font-display font-bold text-base">
+                      <div className="min-w-0">
+                        <p className="text-white font-bold text-xs leading-tight truncate">
                           {card.label[language]}
                         </p>
-                        <p className="text-white/70 text-xs">
+                        <p className="text-white/65 text-[0.65rem] truncate">
                           {card.sub[language]}
                         </p>
                       </div>
-                    </div>
-                  </motion.div>
-                );
-              })}
+                    </motion.div>
+                  );
+                })}
+              </div>
 
-              {/* Glassmorphism card */}
+              {/* Mobile: compact why-choose-us pills */}
               <motion.div
-                initial={{ opacity: 0, x: 60 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.7, delay: 0.9 }}
-                className="w-full max-w-xs"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.7 }}
+                className="lg:hidden glass rounded-2xl px-4 py-4 bg-white/5 border border-white/10 shadow-xl"
               >
-                <div className="glass rounded-3xl p-6 bg-white/5 border border-white/10 shadow-2xl">
-                  <p className="text-purple-300 text-xl font-bold tracking-widest uppercase mb-4">
-                    {t.whyChooseUs.title[language]}
-                  </p>
+                <p className="text-purple-300 text-xs font-bold tracking-widest uppercase mb-3">
+                  {t.whyChooseUs.title[language]}
+                </p>
+                <div className="grid grid-cols-2 gap-2">
                   {t.whyChooseUs.items.map((item, i) => (
-                    <div
-                      key={i}
-                      className="flex items-center gap-3 mb-3 last:mb-0"
-                    >
-                      <span className="w-5 h-5 rounded-full bg-purple-500/30 flex items-center justify-center shrink-0">
-                        <span className="w-2 h-2 rounded-full bg-purple-400" />
+                    <div key={i} className="flex items-center gap-2">
+                      <span className="w-4 h-4 rounded-full bg-purple-500/30 flex items-center justify-center shrink-0">
+                        <span className="w-1.5 h-1.5 rounded-full bg-purple-400" />
                       </span>
-                      <span className="text-white/80 text-lg font-bold">
+                      <span className="text-white/80 text-xs font-semibold leading-tight">
                         {item[language]}
                       </span>
                     </div>
                   ))}
                 </div>
               </motion.div>
+
+              {/* Desktop: original floating cards */}
+              <div className="hidden lg:flex flex-col gap-4 items-end">
+                {t.floatingCards.map((card, i) => {
+                  const Icon = cardIcons[i];
+                  return (
+                    <motion.div
+                      key={i}
+                      initial={{ opacity: 0, x: 60 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ duration: 0.7, delay: 0.5 + cardDelays[i] }}
+                      className="animate-float"
+                      style={{ animationDelay: `${i * 2}s` }}
+                    >
+                      <div
+                        className={`glass flex items-center gap-4 px-6 py-4 rounded-2xl bg-linear-to-r ${cardColors[i]} shadow-2xl min-w-52`}
+                      >
+                        <div className="w-12 h-12 rounded-xl bg-white/15 flex items-center justify-center shrink-0">
+                          <Icon className="w-6 h-6 text-white" />
+                        </div>
+                        <div>
+                          <p className="text-white font-display font-bold text-base">
+                            {card.label[language]}
+                          </p>
+                          <p className="text-white/70 text-xs">
+                            {card.sub[language]}
+                          </p>
+                        </div>
+                      </div>
+                    </motion.div>
+                  );
+                })}
+
+                <motion.div
+                  initial={{ opacity: 0, x: 60 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.7, delay: 0.9 }}
+                  className="w-full max-w-xs"
+                >
+                  <div className="glass rounded-3xl p-6 bg-white/5 border border-white/10 shadow-2xl">
+                    <p className="text-purple-300 text-xl font-bold tracking-widest uppercase mb-4">
+                      {t.whyChooseUs.title[language]}
+                    </p>
+                    {t.whyChooseUs.items.map((item, i) => (
+                      <div
+                        key={i}
+                        className="flex items-center gap-3 mb-3 last:mb-0"
+                      >
+                        <span className="w-5 h-5 rounded-full bg-purple-500/30 flex items-center justify-center shrink-0">
+                          <span className="w-2 h-2 rounded-full bg-purple-400" />
+                        </span>
+                        <span className="text-white/80 text-base font-bold">
+                          {item[language]}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                </motion.div>
+              </div>
             </div>
           </div>
         </div>
@@ -282,35 +332,17 @@ export default function HeroSection() {
       <button
         onClick={() => goTo(current - 1)}
         aria-label="Previous slide"
-        className="absolute left-4 sm:left-6 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-white/10 border border-white/20 backdrop-blur flex items-center justify-center text-white hover:bg-white/25 hover:border-white/40 transition-all duration-300"
+        className="absolute left-3 sm:left-6 top-1/2 -translate-y-1/2 z-20 w-9 h-9 sm:w-11 sm:h-11 rounded-full bg-white/10 border border-white/20 backdrop-blur flex items-center justify-center text-white hover:bg-white/25 hover:border-white/40 transition-all duration-300"
       >
-        <ChevronLeft className="w-5 h-5" />
+        <ChevronLeft className="w-4 h-4 sm:w-5 sm:h-5" />
       </button>
       <button
         onClick={() => goTo(current + 1)}
         aria-label="Next slide"
-        className="absolute right-4 sm:right-6 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-white/10 border border-white/20 backdrop-blur flex items-center justify-center text-white hover:bg-white/25 hover:border-white/40 transition-all duration-300"
+        className="absolute right-3 sm:right-6 top-1/2 -translate-y-1/2 z-20 w-9 h-9 sm:w-11 sm:h-11 rounded-full bg-white/10 border border-white/20 backdrop-blur flex items-center justify-center text-white hover:bg-white/25 hover:border-white/40 transition-all duration-300"
       >
-        <ChevronRight className="w-5 h-5" />
+        <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5" />
       </button>
-
-      {/* Scroll cue */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.5 }}
-        className="relative z-10 flex flex-col items-center pb-8 gap-2"
-      >
-        <span className="text-white/40 text-xs tracking-widest uppercase">
-          {t.scrollCue[language]}
-        </span>
-        <motion.div
-          animate={{ y: [0, 8, 0] }}
-          transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut" }}
-        >
-          <ChevronDown className="w-5 h-5 text-white/40" />
-        </motion.div>
-      </motion.div>
 
       {/* Bottom wave */}
       <div className="absolute bottom-0 inset-x-0 pointer-events-none">

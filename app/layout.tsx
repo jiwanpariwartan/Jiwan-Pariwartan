@@ -8,6 +8,7 @@ import FloatingWhatsApp from "@/components/ui/FloatingWhatsApp";
 import { ActiveSectionProvider } from "@/context/ActiveSectionContext";
 import { LanguageProvider } from "@/context/LanguageContext";
 import { Toaster } from "react-hot-toast";
+import PreHeader from "@/components/layout/PreHeader";
 
 const poppins = Poppins({
   weight: ["400", "500", "600", "700", "800"],
@@ -92,32 +93,44 @@ export default function RootLayout({
       className={`${poppins.variable} ${manrope.variable} h-full scroll-smooth`}
       suppressHydrationWarning
     >
-      <body className="min-h-full flex flex-col antialiased" suppressHydrationWarning>
+      <body
+        className="min-h-full flex flex-col antialiased"
+        suppressHydrationWarning
+      >
         <LanguageProvider>
-        <ActiveSectionProvider>
-          <ScrollProgress />
-          <Header />
-          <main className="flex-1">{children}</main>
-          <Footer />
-          <FloatingWhatsApp />
-          <Toaster
-            position="top-right"
-            toastOptions={{
-              duration: 5000,
-              style: {
-                borderRadius: "12px",
-                padding: "14px 18px",
-                fontFamily: "var(--font-manrope)",
-              },
-              success: {
-                style: { background: "#f0fdf4", color: "#166534", border: "1px solid #bbf7d0" },
-              },
-              error: {
-                style: { background: "#fef2f2", color: "#991b1b", border: "1px solid #fecaca" },
-              },
-            }}
-          />
-        </ActiveSectionProvider>
+          <ActiveSectionProvider>
+            <ScrollProgress />
+            <PreHeader />
+            <Header />
+            <main className="flex-1">{children}</main>
+            <Footer />
+            <FloatingWhatsApp />
+            <Toaster
+              position="top-right"
+              toastOptions={{
+                duration: 5000,
+                style: {
+                  borderRadius: "12px",
+                  padding: "14px 18px",
+                  fontFamily: "var(--font-manrope)",
+                },
+                success: {
+                  style: {
+                    background: "#f0fdf4",
+                    color: "#166534",
+                    border: "1px solid #bbf7d0",
+                  },
+                },
+                error: {
+                  style: {
+                    background: "#fef2f2",
+                    color: "#991b1b",
+                    border: "1px solid #fecaca",
+                  },
+                },
+              }}
+            />
+          </ActiveSectionProvider>
         </LanguageProvider>
       </body>
     </html>
