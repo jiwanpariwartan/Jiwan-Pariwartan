@@ -21,6 +21,13 @@ const contacts = [
   },
   {
     label: "Nepal",
+    number: "980-5667436",
+    href: "tel:+9779805667436",
+    icon: Phone,
+    flag: "🇳🇵",
+  },
+  {
+    label: "Nepal",
     number: "984-5876337",
     href: "tel:+9779845876337",
     icon: Phone,
@@ -30,13 +37,6 @@ const contacts = [
     label: "Nepal",
     number: "984-1556130",
     href: "tel:+9779841556130",
-    icon: Phone,
-    flag: "🇳🇵",
-  },
-  {
-    label: "Nepal",
-    number: "980-5667436",
-    href: "tel:+9779805667436",
     icon: Phone,
     flag: "🇳🇵",
   },

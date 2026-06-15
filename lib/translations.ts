@@ -438,8 +438,9 @@ export const translations = {
     },
 
     description: {
-      en: " is a professionally operated rehabilitation and recovery center dedicated to helping individuals overcome drug addiction, alcohol dependency, and mental health challenges. Located in a peaceful and supportive environment, the center provides compassionate, affordable, and evidence-based residential treatment programs designed to support long-term healing, personal transformation, and recovery for individuals and families seeking a better future.",
-      np: " एक व्यावसायिक रूपमा सञ्चालित पुनर्स्थापना तथा रिकभरी सेन्टर हो जसले व्यक्तिहरूलाई लागू पदार्थको लत, मदिराको लत र मानसिक स्वास्थ्य समस्याबाट मुक्त गर्न मद्दत गर्दछ। शान्त र सहयोगी वातावरणमा अवस्थित यो केन्द्रले करुणामय, किफायती र प्रमाण-आधारित आवासीय उपचार कार्यक्रम प्रदान गर्दछ जसले दीर्घकालीन उपचार, व्यक्तिगत परिवर्तन र व्यक्तिहरू तथा परिवारहरूलाई राम्रो भविष्यको लागि रिकभरीमा सहयोग गर्दछ।",
+      en: "is a professionally operated rehabilitation and recovery center dedicated to helping individuals overcome drug addiction, alcohol dependency, gambling addiction, sex addiction, and mental health challenges. Located in a peaceful and supportive environment, the center provides compassionate, affordable, and evidence-based residential treatment programs designed to support long-term healing, personal transformation, and recovery for individuals and families seeking a better future.",
+
+      np: "एक व्यावसायिक रूपमा सञ्चालित पुनर्स्थापना तथा रिकभरी सेन्टर हो जसले व्यक्तिहरूलाई लागू पदार्थको लत, मदिराको लत, जुवा खेल्ने लत, यौन व्यवहारसम्बन्धी लत तथा मानसिक स्वास्थ्य समस्याबाट मुक्त हुन मद्दत गर्दछ। शान्त र सहयोगी वातावरणमा अवस्थित यो केन्द्रले करुणामय, किफायती र प्रमाण-आधारित आवासीय उपचार कार्यक्रम प्रदान गर्दछ जसले दीर्घकालीन उपचार, व्यक्तिगत परिवर्तन तथा व्यक्तिहरू र परिवारहरूलाई राम्रो भविष्यका लागि रिकभरीको यात्रामा सहयोग गर्दछ।",
     },
 
     // Section Title
@@ -473,32 +474,20 @@ export const translations = {
           np: "चिकित्सकीय डिटक्सिफिकेशन",
         },
         description: {
-          en: "Safe and supervised withdrawal management with 24/7 medical support to minimize discomfort and risks.",
-          np: "असुविधा र जोखिमलाई न्यूनतम बनाउन २४/७ चिकित्सकीय सहयोगसहित सुरक्षित र पर्यवेक्षित डिटक्स प्रक्रिया।",
-        },
-      },
-      {
-        icon: "MessageCircle",
-        color: "bg-purple-100 text-purple-600",
-        title: {
-          en: "Individual & Group Therapy",
-          np: "व्यक्तिगत तथा समूह थेरापी",
-        },
-        description: {
-          en: "Evidence-based counseling sessions including CBT, DBT, and trauma-informed therapy.",
-          np: "CBT, DBT र ट्रमा-इन्फर्म्ड थेरापीसहित प्रमाण-आधारित काउन्सेलिङ सत्रहरू।",
+          en: "Safe and supervised withdrawal management with 24/7 medical support to minimize discomfort and risks. Our experienced healthcare team closely monitors each individual throughout the detox process and provides personalized care to ensure a stable and comfortable transition into recovery.",
+          np: "असुविधा र जोखिमलाई न्यूनतम बनाउन २४/७ चिकित्सकीय सहयोगसहित सुरक्षित र पर्यवेक्षित डिटक्स प्रक्रिया। अनुभवी स्वास्थ्यकर्मीहरूको टोलीले सम्पूर्ण डिटक्स अवधिभर नजिकबाट निगरानी गर्दै प्रत्येक व्यक्तिको आवश्यकता अनुसार व्यक्तिगत उपचार र सहयोग प्रदान गर्दछ।",
         },
       },
       {
         icon: "Users",
-        color: "bg-amber-100 text-amber-600",
+        color: "bg-purple-100 text-purple-600",
         title: {
-          en: "Family Counseling",
-          np: "परिवार काउन्सेलिङ",
+          en: "Individual, Group & Family Counseling",
+          np: "व्यक्तिगत, समूह तथा पारिवारिक काउन्सेलिङ",
         },
         description: {
-          en: "Healing family relationships and building strong support systems essential for long-term recovery.",
-          np: "दीर्घकालीन रिकभरीका लागि आवश्यक परिवार सम्बन्ध सुधार र बलियो समर्थन प्रणाली निर्माण।",
+          en: "Evidence-based counseling sessions including CBT, DBT, trauma-informed therapy, and family counseling. These sessions help individuals understand the root causes of addiction, develop healthy coping skills, strengthen family relationships, and build a supportive foundation for long-term recovery.",
+          np: "CBT, DBT, ट्रमा-इन्फर्म्ड थेरापी तथा पारिवारिक काउन्सेलिङसहित प्रमाण-आधारित परामर्श सत्रहरू। यी सत्रहरूले व्यक्तिलाई लतको मूल कारण बुझ्न, स्वस्थ सामना गर्ने सीप विकास गर्न, पारिवारिक सम्बन्ध सुधार गर्न तथा दीर्घकालीन रिकभरीका लागि बलियो आधार निर्माण गर्न सहयोग गर्दछ।",
         },
       },
       {
@@ -509,8 +498,20 @@ export const translations = {
           np: "समग्र स्वास्थ्य",
         },
         description: {
-          en: "Yoga, meditation, nutrition planning, and mindfulness practices for complete mind-body healing.",
-          np: "पूर्ण मानसिक-शारीरिक उपचारका लागि योग, ध्यान, पोषण योजना र माइन्डफुलनेस अभ्यास।",
+          en: "Yoga, meditation, nutrition planning, and mindfulness practices for complete mind-body healing. Our holistic approach promotes emotional balance, stress management, and overall well-being, helping individuals maintain a healthier lifestyle during and after treatment.",
+          np: "पूर्ण मानसिक-शारीरिक उपचारका लागि योग, ध्यान, पोषण योजना र माइन्डफुलनेस अभ्यास। हाम्रो समग्र स्वास्थ्य दृष्टिकोणले भावनात्मक सन्तुलन, तनाव व्यवस्थापन तथा समग्र स्वास्थ्य सुधारमा सहयोग गर्दै उपचारपछिको स्वस्थ जीवनशैली कायम राख्न मद्दत गर्दछ।",
+        },
+      },
+      {
+        icon: "Briefcase",
+        color: "bg-orange-100 text-orange-600",
+        title: {
+          en: "Job-Ready Training",
+          np: "रोजगार-तयारी तालिम",
+        },
+        description: {
+          en: "Practical skill development, workplace readiness training, and confidence-building programs designed to support successful reintegration into society. Participants gain valuable life and employment skills that improve independence, productivity, and long-term stability after recovery.",
+          np: "समाजमा सफल पुनःएकीकरणका लागि व्यावहारिक सीप विकास, रोजगार तयारी तालिम तथा आत्मविश्वास अभिवृद्धि कार्यक्रमहरू। सहभागीहरूले आत्मनिर्भरता, उत्पादकता तथा दीर्घकालीन स्थायित्व बढाउने जीवनोपयोगी र रोजगारसम्बन्धी सीपहरू हासिल गर्छन्।",
         },
       },
       {
@@ -521,8 +522,8 @@ export const translations = {
           np: "पछिको हेरचाह तथा रिलाप्स रोकथाम",
         },
         description: {
-          en: "Continued support, alumni programs, and relapse prevention strategies for sustained sobriety.",
-          np: "दीर्घकालीन sobriety का लागि निरन्तर सहयोग, पूर्व विद्यार्थी कार्यक्रम र रिलाप्स रोकथाम रणनीति।",
+          en: "Continued support, alumni programs, and relapse prevention strategies for sustained recovery. We help individuals identify triggers, maintain accountability, and stay connected to a supportive recovery community long after treatment is completed.",
+          np: "दीर्घकालीन रिकभरीका लागि निरन्तर सहयोग, पूर्व सहभागी कार्यक्रम तथा रिलाप्स रोकथाम रणनीतिहरू। उपचार सम्पन्न भएपछि पनि व्यक्तिलाई ट्रिगरहरू पहिचान गर्न, जिम्मेवारी कायम राख्न तथा सहयोगी रिकभरी समुदायसँग जोडिरहन मद्दत गरिन्छ।",
         },
       },
       {
@@ -533,8 +534,8 @@ export const translations = {
           np: "सुरक्षित र सहयोगी वातावरण",
         },
         description: {
-          en: "24/7 supervised residential care in a serene, confidential, and healing atmosphere.",
-          np: "शान्त, गोप्य र उपचारात्मक वातावरणमा २४/७ पर्यवेक्षित आवासीय सेवा।",
+          en: "24/7 supervised residential care in a serene, confidential, and healing atmosphere. Our facility is designed to provide safety, structure, and emotional support, allowing individuals to focus fully on their recovery journey with dignity and respect.",
+          np: "शान्त, गोप्य र उपचारात्मक वातावरणमा २४/७ पर्यवेक्षित आवासीय सेवा। हाम्रो केन्द्रले सुरक्षा, अनुशासन र भावनात्मक सहयोग प्रदान गर्दै व्यक्तिलाई सम्मान र आत्मविश्वासका साथ आफ्नो रिकभरी यात्रामा केन्द्रित हुन सक्षम बनाउँछ।",
         },
       },
     ],
@@ -566,8 +567,8 @@ export const translations = {
           ne: "मान्यता प्राप्त र प्रमाणित",
         },
         description: {
-          en: "Recognized by Nepal's health authorities with internationally trained specialists and evidence-based protocols.",
-          ne: "नेपालका स्वास्थ्य निकायबाट मान्यता प्राप्त, अन्तर्राष्ट्रिय रूपमा प्रशिक्षित विशेषज्ञ र प्रमाणमा आधारित उपचार प्रणाली।",
+          en: "Recognized by Nepal's health authorities with internationally trained specialists and evidence-based protocols. Our accreditation ensures that all treatment practices meet strict clinical and ethical standards for safe and effective recovery.",
+          ne: "नेपालका स्वास्थ्य निकायबाट मान्यता प्राप्त, अन्तर्राष्ट्रिय रूपमा प्रशिक्षित विशेषज्ञ र प्रमाणमा आधारित उपचार प्रणाली। हाम्रो मान्यताले सबै उपचार विधिहरू सुरक्षित र प्रभावकारी रिकभरीका लागि कडा चिकित्सकीय तथा नैतिक मापदण्ड पूरा गरेको सुनिश्चित गर्दछ।",
         },
       },
 
@@ -577,8 +578,8 @@ export const translations = {
           ne: "करुणामय सेवा",
         },
         description: {
-          en: "We treat every person with dignity, respect, and deep empathy — never as a patient number, always as a human being.",
-          ne: "हामी प्रत्येक व्यक्तिलाई सम्मान, मर्यादा र सहानुभूतिका साथ व्यवहार गर्छौं — केवल बिरामीको रूपमा होइन, एक मानवको रूपमा।",
+          en: "We treat every person with dignity, respect, and deep empathy — never as a patient number, always as a human being. Our approach focuses on emotional safety and trust-building to support meaningful and lasting recovery.",
+          ne: "हामी प्रत्येक व्यक्तिलाई सम्मान, मर्यादा र सहानुभूतिका साथ व्यवहार गर्छौं — केवल बिरामीको रूपमा होइन, एक मानवको रूपमा। हाम्रो दृष्टिकोण भावनात्मक सुरक्षा र विश्वास निर्माणमा केन्द्रित छ, जसले दीर्घकालीन र अर्थपूर्ण रिकभरीलाई सहयोग गर्छ।",
         },
       },
 
@@ -588,8 +589,8 @@ export const translations = {
           ne: "समग्र उपचार",
         },
         description: {
-          en: "Integrating clinical medicine with yoga, meditation, nutrition, and art therapy for whole-person recovery.",
-          ne: "योग, ध्यान, पोषण र कला-चिकित्सासँग चिकित्सकीय उपचारलाई समेटेर सम्पूर्ण पुनर्स्थापनामा केन्द्रित।",
+          en: "Integrating clinical medicine with yoga, meditation, nutrition, and art therapy for whole-person recovery. This balanced approach addresses physical, emotional, and psychological well-being to support long-term transformation.",
+          ne: "योग, ध्यान, पोषण र कला-चिकित्सासँग चिकित्सकीय उपचारलाई समेटेर सम्पूर्ण पुनर्स्थापनामा केन्द्रित। यो सन्तुलित दृष्टिकोणले शारीरिक, भावनात्मक र मानसिक स्वास्थ्यलाई सम्बोधन गर्दै दीर्घकालीन परिवर्तनमा सहयोग गर्दछ।",
         },
       },
 
@@ -599,8 +600,8 @@ export const translations = {
           ne: "२४/७ चिकित्सकीय सहयोग",
         },
         description: {
-          en: "Round-the-clock access to our clinical team during the critical early phases of recovery and detox.",
-          ne: "पुनर्स्थापना र डिटक्सको प्रारम्भिक महत्वपूर्ण चरणमा चौबीसै घण्टा चिकित्सकीय टोलीको साथ।",
+          en: "Round-the-clock access to our clinical team during the critical early phases of recovery and detox. Continuous monitoring ensures safety, stability, and immediate response to any medical or emotional needs.",
+          ne: "पुनर्स्थापना र डिटक्सको प्रारम्भिक महत्वपूर्ण चरणमा चौबीसै घण्टा चिकित्सकीय टोलीको साथ। निरन्तर निगरानीले सुरक्षा, स्थिरता र कुनै पनि चिकित्सकीय वा भावनात्मक आवश्यकतामा तुरुन्त प्रतिक्रिया सुनिश्चित गर्दछ।",
         },
       },
 
@@ -610,8 +611,8 @@ export const translations = {
           ne: "शान्त वातावरण",
         },
         description: {
-          en: "A peaceful, nature-inspired healing environment specifically designed to reduce stress and promote restoration.",
-          ne: "तनाव कम गर्न र पुनःस्थापनालाई प्रोत्साहन गर्न प्रकृतिमैत्री तथा शान्त वातावरण।",
+          en: "A peaceful, nature-inspired healing environment specifically designed to reduce stress and promote restoration. The calming surroundings help individuals focus on recovery away from external pressures and distractions.",
+          ne: "तनाव कम गर्न र पुनःस्थापनालाई प्रोत्साहन गर्न प्रकृतिमैत्री तथा शान्त वातावरण। यो शान्त परिवेशले बाह्य दबाब र ध्यान भंग गर्ने तत्वहरूबाट टाढा रहँदै व्यक्तिलाई रिकभरीमा केन्द्रित हुन सहयोग गर्दछ।",
         },
       },
 
@@ -621,8 +622,8 @@ export const translations = {
           ne: "सफल परिणामहरू",
         },
         description: {
-          en: "With a 96% success rate and 1000+ alumni, our track record speaks to the effectiveness of our approach.",
-          ne: "९६% सफलता दर र १००० भन्दा बढी पूर्व सदस्यहरूको विश्वासले हाम्रो प्रभावकारी उपचार पद्धति प्रमाणित गर्दछ।",
+          en: "With a 96% success rate and 1000+ alumni, our track record speaks to the effectiveness of our approach. We continuously refine our programs based on outcomes to ensure the highest standards of recovery support.",
+          ne: "९६% सफलता दर र १००० भन्दा बढी पूर्व सदस्यहरूको विश्वासले हाम्रो प्रभावकारी उपचार पद्धति प्रमाणित गर्दछ। हामी निरन्तर परिणामका आधारमा आफ्ना कार्यक्रम सुधार्दै उच्च गुणस्तरको रिकभरी सेवा सुनिश्चित गर्छौं।",
         },
       },
     },
