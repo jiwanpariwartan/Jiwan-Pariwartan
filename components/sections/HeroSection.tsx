@@ -5,7 +5,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import {
-  ChevronDown,
   ChevronLeft,
   ChevronRight,
   Phone,
@@ -120,7 +119,7 @@ export default function HeroSection() {
       </div>
 
       {/* Main content — pt accounts for preheader (38px) + header (~72px) = 110px */}
-      <div className="relative z-10 flex-1 flex items-center min-h-0 pt-[110px] pb-8 lg:pb-0">
+      <div className="relative z-10 flex-1 flex items-center min-h-0 pt-27.5 pb-8 lg:pb-0">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             {/* ── Text column ── */}
