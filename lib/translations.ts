@@ -176,8 +176,8 @@ export const translations = {
         stats: {
           years: {
             value: {
-              en: "15+",
-              np: "१५+",
+              en: "5+",
+              np: "५+",
             },
             label: {
               en: "Years",
@@ -187,8 +187,8 @@ export const translations = {
 
           recovered: {
             value: {
-              en: "1000+",
-              np: "१०००+",
+              en: "2000+",
+              np: "२०००+",
             },
             label: {
               en: "Recovered",
@@ -1019,21 +1019,21 @@ export const translations = {
         en: "Drug Recovery",
         ne: "लागूपदार्थ पुनर्स्थापना",
       },
-      wellness: {
-        en: "Mental Wellness",
-        ne: "मानसिक स्वास्थ्य",
-      },
       detox: {
         en: "Medical Detox",
-        ne: "मेडिकल डिटक्स",
+        ne: "चिकित्सकीय डिटक्स",
       },
-      family: {
-        en: "Family Support",
-        ne: "पारिवारिक सहयोग",
+      gambling: {
+        en: "Gambling Addiction Recovery",
+        ne: "जुवा लत पुनर्स्थापना",
+      },
+      sex: {
+        en: "Sex Addiction Recovery",
+        ne: "यौन लत पुनर्स्थापना",
       },
       counseling: {
-        en: "Individual Counseling",
-        ne: "व्यक्तिगत परामर्श",
+        en: "Individual & Family Counseling",
+        ne: "व्यक्तिगत तथा पारिवारिक परामर्श",
       },
     },
 
@@ -1044,6 +1044,29 @@ export const translations = {
       },
 
       phone: { en: "+977-9805667436", ne: "+९७७-९८०५६६७४३६" },
+
+      phones: {
+        whatsapp: {
+          en: "WhatsApp: +61 426 564 324",
+          ne: "ह्वाट्सएप: +61 426 564 324",
+        },
+        australia: {
+          en: "🇦🇺 Australia: +61 426 564 324",
+          ne: "🇦🇺 अस्ट्रेलिया: +61 426 564 324",
+        },
+        nepal1: {
+          en: "🇳🇵 Nepal: 980-5667436",
+          ne: "🇳🇵 नेपाल: ९८०-५६६७४३६",
+        },
+        nepal2: {
+          en: "🇳🇵 Nepal: 984-5876337",
+          ne: "🇳🇵 नेपाल: ९८४-५८७६३३७",
+        },
+        nepal3: {
+          en: "🇳🇵 Nepal: 984-1556130",
+          ne: "🇳🇵 नेपाल: ९८४-१५५६१३०",
+        },
+      },
 
       helpline: {
         en: "24/7 Helpline",

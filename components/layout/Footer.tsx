@@ -43,16 +43,16 @@ export default function Footer() {
         href: "/programs#drug-recovery",
       },
       {
-        label: t.programLinks.wellness[language],
-        href: "/programs#mental-wellness",
-      },
-      {
         label: t.programLinks.detox[language],
         href: "/programs#detox-programs",
       },
       {
-        label: t.programLinks.family[language],
-        href: "/programs#family-support",
+        label: t.programLinks.gambling[language],
+        href: "/programs#gambling",
+      },
+      {
+        label: t.programLinks.sex[language],
+        href: "/programs#sex-addiction",
       },
       {
         label: t.programLinks.counseling[language],
@@ -183,10 +183,27 @@ export default function Footer() {
                 >
                   <Phone className="w-4 h-4 mt-0.5 text-purple-500 group-hover:text-purple-400 shrink-0" />
 
-                  <span>
-                    {t.contact.phone[language]}
-                    <br />
-                    {/* {t.contact.emergency[language]}: +977-98XXXXXXXX */}
+                  <span className="flex flex-col gap-1">
+                    <a
+                      href="https://wa.me/61426564324"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:underline"
+                    >
+                      {t.contact.phones.whatsapp[language]}
+                    </a>
+                    <a href="tel:+61426564324" className="hover:underline">
+                      {t.contact.phones.australia[language]}
+                    </a>
+                    <a href="tel:+9779805667436" className="hover:underline">
+                      {t.contact.phones.nepal1[language]}
+                    </a>
+                    <a href="tel:+9779845876337" className="hover:underline">
+                      {t.contact.phones.nepal2[language]}
+                    </a>
+                    <a href="tel:+9779841556130" className="hover:underline">
+                      {t.contact.phones.nepal3[language]}
+                    </a>
                   </span>
                 </a>
               </li>
