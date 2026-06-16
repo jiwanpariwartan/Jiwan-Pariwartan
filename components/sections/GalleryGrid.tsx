@@ -33,7 +33,7 @@ const galleryItems: {
   { id: 17, category: "people", image: "/images/gallery/kta.jpg" },
   { id: 18, category: "therapy", image: "/images/gallery/health.jpg" },
   { id: 19, category: "therapy", image: "/images/gallery/checkup.jpg" },
-  { id: 19, category: "events", image: "/images/gallery/disc.jpg" },
+  { id: 20, category: "events", image: "/images/gallery/disc.jpg" },
 ];
 
 export default function GalleryGrid() {
