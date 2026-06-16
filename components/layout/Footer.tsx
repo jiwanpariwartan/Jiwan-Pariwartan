@@ -247,10 +247,24 @@ export default function Footer() {
             {t.bottom.copyright[language]}
           </p>
 
-          <p className="text-xs text-gray-500 flex items-center gap-1.5 text-center">
+          <p className="text-xs text-gray-500 flex items-center gap-1.5 text-center flex-wrap justify-center">
             {t.bottom.madeWith[language]}
+
             <Heart className="w-3.5 h-3.5 text-purple-500 fill-purple-500" />
+
             {t.bottom.healing[language]}
+
+            <span>
+              by{" "}
+              <a
+                href="https://webnep.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-purple-500 hover:text-purple-600 font-medium underline"
+              >
+                WebNep
+              </a>
+            </span>
           </p>
         </div>
       </div>

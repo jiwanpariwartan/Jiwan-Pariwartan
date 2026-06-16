@@ -1086,8 +1086,13 @@ export const translations = {
       },
 
       madeWith: {
-        en: "Made with",
-        ne: "निर्माण गरिएको",
+        en: "Crafted by WebNep",
+        ne: "WebNep द्वारा निर्माण गरिएको",
+      },
+
+      webnep: {
+        en: "https://webnep.com",
+        ne: "https://webnep.com",
       },
 
       healing: {
