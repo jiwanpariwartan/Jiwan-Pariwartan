@@ -622,8 +622,8 @@ export const translations = {
           ne: "सफल परिणामहरू",
         },
         description: {
-          en: "With a 96% success rate and 1000+ alumni, our track record speaks to the effectiveness of our approach. We continuously refine our programs based on outcomes to ensure the highest standards of recovery support.",
-          ne: "९६% सफलता दर र १००० भन्दा बढी पूर्व सदस्यहरूको विश्वासले हाम्रो प्रभावकारी उपचार पद्धति प्रमाणित गर्दछ। हामी निरन्तर परिणामका आधारमा आफ्ना कार्यक्रम सुधार्दै उच्च गुणस्तरको रिकभरी सेवा सुनिश्चित गर्छौं।",
+          en: "With a 96% success rate and 2000+ alumni, our track record speaks to the effectiveness of our approach. We continuously refine our programs based on outcomes to ensure the highest standards of recovery support.",
+          ne: "९६% सफलता दर र २००० भन्दा बढी पूर्व सदस्यहरूको विश्वासले हाम्रो प्रभावकारी उपचार पद्धति प्रमाणित गर्दछ। हामी निरन्तर परिणामका आधारमा आफ्ना कार्यक्रम सुधार्दै उच्च गुणस्तरको रिकभरी सेवा सुनिश्चित गर्छौं।",
         },
       },
     },

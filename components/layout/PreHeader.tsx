@@ -86,7 +86,7 @@ export default function PreHeader() {
           {/* Socials */}
           <div className="flex items-center ml-3 pl-3 border-l border-white/15">
             <a
-              href="https://facebook.com/yourpage"
+              href="https://www.facebook.com/profile.php?id=61575065676083"
               target="_blank"
               rel="noopener noreferrer"
               className="p-1.5 text-white/60 hover:text-white transition-colors"
@@ -95,7 +95,7 @@ export default function PreHeader() {
               <FaFacebookF size={13} />
             </a>
 
-            <a
+            {/* <a
               href="https://instagram.com/yourpage"
               target="_blank"
               rel="noopener noreferrer"
@@ -103,10 +103,10 @@ export default function PreHeader() {
               aria-label="Instagram"
             >
               <FaInstagram size={13} />
-            </a>
+            </a> */}
 
             <a
-              href="https://tiktok.com/@yourpage"
+              href="https://www.tiktok.com/@9841556130godawari"
               target="_blank"
               rel="noopener noreferrer"
               className="p-1.5 text-white/60 hover:text-white transition-colors"
