@@ -78,11 +78,11 @@ export const translations = {
     whyChooseUs: {
       title: { en: "Why Choose Us", ne: "हामीलाई किन छान्ने" },
       items: [
-        { en: "EVIDENCE-based treatment", ne: "प्रमाण-आधारित उपचार" },
-        { en: "HOLISTIC healing approach", ne: "समग्र उपचार पद्धति" },
-        { en: "FAMILY-centered care", ne: "परिवार-केन्द्रित सेवा" },
+        { en: "Evidence-Based Treatment", ne: "प्रमाण-आधारित उपचार" },
+        { en: "Holistic Healing Approach", ne: "समग्र उपचार पद्धति" },
+        { en: "Family-Centered Care", ne: "परिवार-केन्द्रित सेवा" },
         {
-          en: "AFTERCARE & alumni support",
+          en: "Aftercare & Alumni Support",
           ne: "पश्चात सेवा र पूर्व-विद्यार्थी सहयोग",
         },
       ],
@@ -147,8 +147,8 @@ export const translations = {
 
       storyContent: {
         paragraph1: {
-          en: "Jiwan Pariwartan — meaning 'Life Transformation' in Nepali — was established over 15 years ago by a group of physicians, psychologists, and recovered individuals who saw the desperate need for dignified, professional addiction care in Nepal.",
-          ne: "‘जीवन परिवर्तन’ — अर्थात् जीवनको सकारात्मक रूपान्तरण — नेपालमा सम्मानजनक र व्यावसायिक लत उपचार सेवाको आवश्यकता महसुस गर्ने चिकित्सक, मनोवैज्ञानिक तथा पुनर्स्थापित व्यक्तिहरूको समूहद्वारा १५ वर्षभन्दा बढी अघि स्थापना गरिएको थियो।",
+          en: "Jiwan Pariwartan — meaning 'Life Transformation' in Nepali — was established over 6 years ago by a group of physicians, psychologists, and recovered individuals who saw the desperate need for dignified, professional addiction care in Nepal.",
+          ne: "‘जीवन परिवर्तन’ — अर्थात् जीवनको सकारात्मक रूपान्तरण — नेपालमा सम्मानजनक र व्यावसायिक लत उपचार सेवाको आवश्यकता महसुस गर्ने चिकित्सक, मनोवैज्ञानिक तथा पुनर्स्थापित व्यक्तिहरूको समूहद्वारा ६ वर्षभन्दा बढी अघि स्थापना गरिएको थियो।",
         },
 
         paragraph2: {
@@ -176,8 +176,8 @@ export const translations = {
         stats: {
           years: {
             value: {
-              en: "5+",
-              np: "५+",
+              en: "6+",
+              np: "६+",
             },
             label: {
               en: "Years",
@@ -266,8 +266,8 @@ export const translations = {
       },
       title: {
         part1: {
-          en: "15 Years of",
-          ne: "१५ वर्षको",
+          en: "6 Years of",
+          ne: "६ वर्षको",
         },
         highlight: {
           en: "Transformation",
@@ -385,8 +385,8 @@ export const translations = {
 
     yearsOfExcellence: {
       value: {
-        en: "5",
-        np: "५",
+        en: "6",
+        np: "६",
       },
       suffix: {
         en: "+",
@@ -918,12 +918,20 @@ export const translations = {
             ne: "फोन तथा हेल्पलाइन",
           },
           office: {
-            en: "+977-9805667436",
-            ne: "+९७७-९८०५६६७४३६ (कार्यालय)",
+            en: "+977-9805667436 (24/7 Helpline)",
+            ne: "+९७७-९८०५६६७४३६ (२४/७ हेल्पलाइन)",
           },
-          helpline: {
-            en: "+977-98XXXXXXXX (24/7 Helpline)",
-            ne: "+977-98XXXXXXXX (२४/७ हेल्पलाइन)",
+          helpline1: {
+            en: "+977-9845876337",
+            ne: "+९७७-९८४५८७६३३७",
+          },
+          helpline2: {
+            en: "+977-9841556130",
+            ne: "+९७७-९८४१५५६१३०",
+          },
+          helpline3: {
+            en: "+61 0451393701 (Australia)",
+            ne: "+६१ ०४५१३९३७०१ (अस्ट्रेलिया)",
           },
         },
 
@@ -1115,8 +1123,8 @@ export const translations = {
           ne: "ह्वाट्सएप: +61 426 564 324",
         },
         australia: {
-          en: "🇦🇺 Australia: +61 426 564 324",
-          ne: "🇦🇺 अस्ट्रेलिया: +61 426 564 324",
+          en: "🇦🇺 Australia: +61 0451393701",
+          ne: "🇦🇺 अस्ट्रेलिया: +61 0451393701",
         },
         nepal1: {
           en: "🇳🇵 Nepal: 980-5667436",

@@ -7,10 +7,12 @@ import { X, MessageCircle } from "lucide-react";
 export default function FloatingWhatsApp() {
   const [showTooltip, setShowTooltip] = useState(false);
 
-  const whatsappNumber = "9779800000000";
+  const whatsappNumber = "61426564324";
+
   const message = encodeURIComponent(
-    "Hello, I would like to learn more about Jiwan Pariwartan's rehabilitation programs."
+    "Hello, I would like to learn more about Jiwan Pariwartan's rehabilitation programs.",
   );
+
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${message}`;
 
   return (
@@ -31,16 +33,21 @@ export default function FloatingWhatsApp() {
               <X className="w-4 h-4" />
             </button>
             <div className="flex items-center gap-3 mb-3">
-              <div className="w-10 h-10 rounded-full bg-gradient-to-br from-purple-600 to-violet-500 flex items-center justify-center">
-                <span className="text-white font-bold text-xs font-display">JP</span>
+              <div className="w-10 h-10 rounded-full bg-linear-to-br from-purple-600 to-violet-500 flex items-center justify-center">
+                <span className="text-white font-bold text-xs font-display">
+                  JP
+                </span>
               </div>
               <div>
-                <p className="font-semibold text-gray-900 text-sm">Jiwan Pariwartan</p>
+                <p className="font-semibold text-gray-900 text-sm">
+                  Jiwan Pariwartan
+                </p>
                 <p className="text-xs text-green-600">● Online now</p>
               </div>
             </div>
             <p className="text-sm text-gray-600 mb-3">
-              Hi there! 👋 Ready to start your recovery journey? We&apos;re here to help.
+              Hi there! 👋 Ready to start your recovery journey? We&apos;re here
+              to help.
             </p>
             <a
               href={whatsappUrl}

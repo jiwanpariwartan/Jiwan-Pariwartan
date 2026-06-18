@@ -23,6 +23,9 @@ const phoneNumbers = [
   { label: "Nepal 1", number: "980-5667436", href: "tel:+9779805667436" },
   { label: "Nepal 2", number: "984-5876337", href: "tel:+9779845876337" },
   { label: "Nepal 3", number: "984-1556130", href: "tel:+9779841556130" },
+  { label: "Australia", number: "0451393701", href: "tel:+61451393701" },
+
+  // 0451393701
 ];
 
 export default function Header() {

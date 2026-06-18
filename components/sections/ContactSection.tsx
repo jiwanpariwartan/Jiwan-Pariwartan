@@ -17,14 +17,16 @@ export default function ContactSection() {
       title: t.contactInfo.phone.title[language],
       lines: [
         t.contactInfo.phone.office[language],
-        t.contactInfo.phone.helpline[language],
+        t.contactInfo.phone.helpline1[language],
+        t.contactInfo.phone.helpline2[language],
+        t.contactInfo.phone.helpline3[language],
       ],
       color: "bg-purple-100 text-purple-700",
     },
     {
       icon: Mail,
       title: t.contactInfo.email.title[language],
-      lines: ["info@jiwanpariwartan.com", "admissions@jiwanpariwartan.com"],
+      lines: ["info@jiwanpariwartan.com"],
       color: "bg-violet-100 text-violet-700",
     },
     {
