@@ -14,8 +14,8 @@ const contacts = [
   },
   {
     label: "Australia",
-    number: "+61 426 564 324",
-    href: "tel:+61426564324",
+    number: "+61 0451393701",
+    href: "tel:+61 0451393701",
     icon: Phone,
     flag: "🇦🇺",
   },
