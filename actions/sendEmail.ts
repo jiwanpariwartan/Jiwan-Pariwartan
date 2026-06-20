@@ -1,6 +1,7 @@
 "use server";
 
 import { z } from "zod";
+import { Resend } from "resend";
 
 const schema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
@@ -16,8 +17,17 @@ export type SendEmailState = {
   errors?: Record<string, string[]>;
 };
 
+function escapeHtml(str: string) {
+  return str
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
+}
+
 export async function sendEmail(
-  formData: z.infer<typeof schema>
+  formData: z.infer<typeof schema>,
 ): Promise<SendEmailState> {
   const parsed = schema.safeParse(formData);
 
@@ -31,45 +41,63 @@ export async function sendEmail(
 
   const { name, email, phone, program, message } = parsed.data;
 
-  // Use Resend if RESEND_API_KEY is set, otherwise log for development
   const apiKey = process.env.RESEND_API_KEY;
 
-  if (apiKey) {
-    try {
-      const { Resend } = await import("resend");
-      const resend = new Resend(apiKey);
+  console.log("ENV CHECK:", process.env.RESEND_API_KEY ? "FOUND" : "MISSING");
 
-      await resend.emails.send({
-        from: "Jiwan Pariwartan Website <noreply@jiwanpariwartan.com>",
-        to: process.env.CONTACT_EMAIL || "info@jiwanpariwartan.com",
-        replyTo: email,
-        subject: `New Enquiry: ${program} – ${name}`,
-        html: `
-          <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto; padding: 32px; background: #fafafa; border-radius: 12px;">
-            <h2 style="color: #6B21A8; margin-bottom: 24px;">New Enquiry from Jiwan Pariwartan Website</h2>
-            <table style="width: 100%; border-collapse: collapse;">
-              <tr><td style="padding: 8px 0; color: #666; width: 140px;">Name</td><td style="padding: 8px 0; color: #111; font-weight: 600;">${name}</td></tr>
-              <tr><td style="padding: 8px 0; color: #666;">Email</td><td style="padding: 8px 0; color: #111;">${email}</td></tr>
-              <tr><td style="padding: 8px 0; color: #666;">Phone</td><td style="padding: 8px 0; color: #111;">${phone}</td></tr>
-              <tr><td style="padding: 8px 0; color: #666;">Program</td><td style="padding: 8px 0; color: #6B21A8; font-weight: 600;">${program}</td></tr>
-            </table>
-            <div style="margin-top: 24px; padding: 16px; background: #fff; border-radius: 8px; border-left: 4px solid #6B21A8;">
-              <p style="color: #666; margin: 0 0 8px 0; font-size: 13px;">Message:</p>
-              <p style="color: #111; margin: 0; line-height: 1.6;">${message}</p>
-            </div>
-            <p style="margin-top: 24px; color: #999; font-size: 12px;">Sent from jiwanpariwartan.com</p>
+  // Fail loudly if misconfigured — no silent fallback in production
+  if (!apiKey) {
+    console.error(
+      "RESEND_API_KEY is not set. Check your .env.local (dev) or hosting provider's env vars (production).",
+    );
+    return {
+      success: false,
+      message:
+        "Email service is not configured. Please contact us by phone instead.",
+    };
+  }
+
+  const resend = new Resend(apiKey);
+
+  try {
+    const { data, error } = await resend.emails.send({
+      from: "Jiwan Pariwartan Website <noreply@jeewanpariwartan.com>",
+      to: process.env.CONTACT_EMAIL || "info@jeewanpariwartan.com",
+      replyTo: email,
+      subject: `New Enquiry: ${program} – ${name}`,
+      html: `
+        <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto; padding: 32px; background: #fafafa; border-radius: 12px;">
+          <h2 style="color: #6B21A8; margin-bottom: 24px;">New Enquiry from Jiwan Pariwartan Website</h2>
+          <table style="width: 100%; border-collapse: collapse;">
+            <tr><td style="padding: 8px 0; color: #666; width: 140px;">Name</td><td style="padding: 8px 0; color: #111; font-weight: 600;">${escapeHtml(name)}</td></tr>
+            <tr><td style="padding: 8px 0; color: #666;">Email</td><td style="padding: 8px 0; color: #111;">${escapeHtml(email)}</td></tr>
+            <tr><td style="padding: 8px 0; color: #666;">Phone</td><td style="padding: 8px 0; color: #111;">${escapeHtml(phone)}</td></tr>
+            <tr><td style="padding: 8px 0; color: #666;">Program</td><td style="padding: 8px 0; color: #6B21A8; font-weight: 600;">${escapeHtml(program)}</td></tr>
+          </table>
+          <div style="margin-top: 24px; padding: 16px; background: #fff; border-radius: 8px; border-left: 4px solid #6B21A8;">
+            <p style="color: #666; margin: 0 0 8px 0; font-size: 13px;">Message:</p>
+            <p style="color: #111; margin: 0; line-height: 1.6;">${escapeHtml(message).replace(/\n/g, "<br/>")}</p>
           </div>
-        `,
-      });
-    } catch {
+          <p style="margin-top: 24px; color: #999; font-size: 12px;">Sent from jeewanpariwartan.com</p>
+        </div>
+      `,
+    });
+
+    if (error) {
+      console.error("Resend API error:", error);
       return {
         success: false,
         message: "Failed to send message. Please try calling us directly.",
       };
     }
-  } else {
-    // Development: log to console
-    console.log("📧 Contact form submission:", { name, email, phone, program, message });
+
+    console.log("Email sent successfully, id:", data?.id);
+  } catch (err) {
+    console.error("sendEmail unexpected exception:", err);
+    return {
+      success: false,
+      message: "Failed to send message. Please try calling us directly.",
+    };
   }
 
   return {

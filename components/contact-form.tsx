@@ -56,7 +56,9 @@ export default function ContactForm() {
         toast.error(result.message);
       }
     } catch {
-      toast.error("Something went wrong. Please try again or call us directly.");
+      toast.error(
+        "Something went wrong. Please try again or call us directly.",
+      );
     } finally {
       setIsLoading(false);
     }
@@ -120,10 +122,14 @@ export default function ContactForm() {
           >
             <option value="">Select a program</option>
             {programs.map((p) => (
-              <option key={p} value={p}>{p}</option>
+              <option key={p} value={p}>
+                {p}
+              </option>
             ))}
           </select>
-          {errors.program && <p className={errorClass}>{errors.program.message}</p>}
+          {errors.program && (
+            <p className={errorClass}>{errors.program.message}</p>
+          )}
         </div>
       </div>
 
@@ -139,19 +145,23 @@ export default function ContactForm() {
           className={`${inputClass} resize-none`}
           aria-invalid={!!errors.message}
         />
-        {errors.message && <p className={errorClass}>{errors.message.message}</p>}
+        {errors.message && (
+          <p className={errorClass}>{errors.message.message}</p>
+        )}
       </div>
 
       {/* Disclaimer */}
       <p className="text-xs text-gray-400 leading-relaxed">
-        All information shared is strictly confidential and protected under our privacy policy. We will never share your personal information with third parties.
+        All information shared is strictly confidential and protected under our
+        privacy policy. We will never share your personal information with third
+        parties.
       </p>
 
       {/* Submit */}
       <button
         type="submit"
         disabled={isLoading}
-        className="w-full flex items-center justify-center gap-2.5 py-4 px-8 rounded-xl font-semibold text-base bg-gradient-to-r from-purple-600 to-violet-500 text-white shadow-lg shadow-purple-500/25 hover:shadow-purple-500/40 hover:scale-[1.02] disabled:opacity-70 disabled:scale-100 disabled:cursor-not-allowed transition-all duration-300"
+        className="w-full flex items-center justify-center gap-2.5 py-4 px-8 rounded-xl font-semibold text-base bg-linear-to-r from-purple-600 to-violet-500 text-white shadow-lg shadow-purple-500/25 hover:shadow-purple-500/40 hover:scale-[1.02] disabled:opacity-70 disabled:scale-100 disabled:cursor-not-allowed transition-all duration-300"
       >
         {isLoading ? (
           <>
