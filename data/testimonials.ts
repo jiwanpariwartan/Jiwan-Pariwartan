@@ -9,7 +9,7 @@ export const testimonials: Testimonial[] = [
       ne: "मद्यपान पुनर्स्थापना स्नातक",
     },
     content: {
-      en: "Jiwan Pariwartan gave me my life back. The compassionate staff, the peaceful environment, and the structured program helped me achieve 18 months of sobriety. I came in broken and left with hope and purpose.",
+      en: "jeewan Pariwartan gave me my life back. The compassionate staff, the peaceful environment, and the structured program helped me achieve 18 months of sobriety. I came in broken and left with hope and purpose.",
       ne: "जीवन परिवर्तनले मलाई मेरो जीवन फिर्ता दिलायो। करुणामय कर्मचारी, शान्तिपूर्ण वातावरण र संरचित कार्यक्रमले मलाई १८ महिनाको संयम हासिल गर्न मद्दत गर्यो। म टुटेको अवस्थामा आएको थिएँ र आशा र उद्देश्यसहित फर्किएँ।",
     },
     rating: 5,
@@ -39,7 +39,7 @@ export const testimonials: Testimonial[] = [
       ne: "मानसिक स्वास्थ्य कार्यक्रम",
     },
     content: {
-      en: "I struggled with severe depression for years. The integrated approach at Jiwan Pariwartan — combining therapy, meditation, and medication management — finally gave me the tools to live a fulfilling life.",
+      en: "I struggled with severe depression for years. The integrated approach at jeewan Pariwartan — combining therapy, meditation, and medication management — finally gave me the tools to live a fulfilling life.",
       ne: "म वर्षौंदेखि गम्भीर डिप्रेसनसँग संघर्ष गर्दै थिएँ। जीवन परिवर्तनको एकीकृत दृष्टिकोण — थेरापी, ध्यान र औषधि व्यवस्थापनको संयोजन — ले अन्ततः मलाई परिपूर्ण जीवन बाँच्ने साधनहरू दियो।",
     },
     rating: 5,

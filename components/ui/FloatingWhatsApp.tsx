@@ -10,7 +10,7 @@ export default function FloatingWhatsApp() {
   const whatsappNumber = "61426564324";
 
   const message = encodeURIComponent(
-    "Hello, I would like to learn more about Jiwan Pariwartan's rehabilitation programs.",
+    "Hello, I would like to learn more about jeewan Pariwartan's rehabilitation programs.",
   );
 
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${message}`;
@@ -40,7 +40,7 @@ export default function FloatingWhatsApp() {
               </div>
               <div>
                 <p className="font-semibold text-gray-900 text-sm">
-                  Jiwan Pariwartan
+                  jeewan Pariwartan
                 </p>
                 <p className="text-xs text-green-600">● Online now</p>
               </div>

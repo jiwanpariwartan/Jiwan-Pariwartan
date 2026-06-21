@@ -61,13 +61,13 @@ export async function sendEmail(
 
   try {
     const { data, error } = await resend.emails.send({
-      from: "Jiwan Pariwartan Website <noreply@jeewanpariwartan.com>",
+      from: "Jeewan Pariwartan Website <noreply@jeewanpariwartan.com>",
       to: process.env.CONTACT_EMAIL || "info@jeewanpariwartan.com",
       replyTo: email,
       subject: `New Enquiry: ${program} – ${name}`,
       html: `
         <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto; padding: 32px; background: #fafafa; border-radius: 12px;">
-          <h2 style="color: #6B21A8; margin-bottom: 24px;">New Enquiry from Jiwan Pariwartan Website</h2>
+          <h2 style="color: #6B21A8; margin-bottom: 24px;">New Enquiry from Jeewan Pariwartan Website</h2>
           <table style="width: 100%; border-collapse: collapse;">
             <tr><td style="padding: 8px 0; color: #666; width: 140px;">Name</td><td style="padding: 8px 0; color: #111; font-weight: 600;">${escapeHtml(name)}</td></tr>
             <tr><td style="padding: 8px 0; color: #666;">Email</td><td style="padding: 8px 0; color: #111;">${escapeHtml(email)}</td></tr>

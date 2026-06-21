@@ -11,9 +11,9 @@ import ContactCTA from "@/components/sections/ContactCTA";
 
 // metadata
 export const metadata: Metadata = {
-  title: "Jiwan Pariwartan – Premier Rehabilitation Center in Nepal",
+  title: "jeewan Pariwartan – Premier Rehabilitation Center in Nepal",
   description:
-    "Find hope, healing, and lasting recovery at Jiwan Pariwartan — Nepal's most compassionate rehabilitation center for addiction and mental wellness.",
+    "Find hope, healing, and lasting recovery at jeewan Pariwartan — Nepal's most compassionate rehabilitation center for addiction and mental wellness.",
 };
 
 export default function HomePage() {

@@ -8,7 +8,7 @@ import ContactCTA from "@/components/sections/ContactCTA";
 export const metadata: Metadata = {
   title: "About Us – Our Story & Mission",
   description:
-    "Learn about Jiwan Pariwartan's founding story, mission, vision, and the expert team dedicated to transforming lives through compassionate rehabilitation in Nepal.",
+    "Learn about jeewan Pariwartan's founding story, mission, vision, and the expert team dedicated to transforming lives through compassionate rehabilitation in Nepal.",
 };
 
 export default function AboutPage() {

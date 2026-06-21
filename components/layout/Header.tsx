@@ -79,7 +79,7 @@ export default function Header() {
                 <div className="relative w-16 h-14 rounded-2xl overflow-hidden">
                   <Image
                     src={logo}
-                    alt="Jiwan Pariwartan logo"
+                    alt="jeewan Pariwartan logo"
                     fill
                     className="object-cover"
                     priority

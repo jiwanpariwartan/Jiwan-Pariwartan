@@ -78,7 +78,7 @@ export default function Footer() {
               <div className="relative w-16 h-14 rounded-2xl overflow-hidden">
                 <Image
                   src={logo}
-                  alt="Jiwan Pariwartan logo"
+                  alt="jeewan Pariwartan logo"
                   fill
                   className="object-cover"
                   priority
@@ -210,11 +210,11 @@ export default function Footer() {
 
               <li>
                 <a
-                  href="mailto:info@jiwanpariwartan.com"
+                  href="mailto:info@jeewanpariwartan.com"
                   className="flex items-center gap-3 text-sm text-gray-400 hover:text-purple-400 transition-colors group"
                 >
                   <Mail className="w-4 h-4 text-purple-500 group-hover:text-purple-400 shrink-0" />
-                  info@jiwanpariwartan.com
+                  info@jeewanpariwartan.com
                 </a>
               </li>
 

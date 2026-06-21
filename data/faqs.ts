@@ -3,7 +3,7 @@ import type { FAQItem } from "@/types";
 export const faqs: FAQItem[] = [
   {
     question: {
-      en: "What types of addiction does Jiwan Pariwartan treat?",
+      en: "What types of addiction does jeewan Pariwartan treat?",
       ne: "जीवन परिवर्तनले कस्ता प्रकारका लतको उपचार गर्छ?",
     },
     answer: {

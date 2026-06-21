@@ -17,7 +17,7 @@ export const translations = {
       contact: { en: "Contact", ne: "सम्पर्क" },
     },
     cta: { en: "Get Help Now", ne: "सहायता लिनुहोस्" },
-    logotTitle: { en: "Jiwan Pariwartan", ne: "जीवन परिवर्तन" },
+    logotTitle: { en: "jeewan Pariwartan", ne: "जीवन परिवर्तन" },
     logoSubtitle: { en: "Rehabilitation Center", ne: "पुनर्स्थापना केन्द्र" },
     phone: { en: "+977-9805667436", ne: "+९७७-९८०५६६७४३६" },
   },
@@ -123,7 +123,7 @@ export const translations = {
       },
 
       description: {
-        en: "Jiwan Pariwartan was founded on a simple but powerful belief: that every person struggling with addiction deserves dignity, expert care, and a genuine chance at a new life.",
+        en: "jeewan Pariwartan was founded on a simple but powerful belief: that every person struggling with addiction deserves dignity, expert care, and a genuine chance at a new life.",
         ne: "जीवन परिवर्तन एक सरल तर शक्तिशाली विश्वासका साथ स्थापना गरिएको हो: लतसँग संघर्ष गरिरहेका प्रत्येक व्यक्तिले सम्मान, विशेषज्ञ उपचार, र नयाँ जीवन सुरु गर्ने वास्तविक अवसर पाउनुपर्छ।",
       },
     },
@@ -147,7 +147,7 @@ export const translations = {
 
       storyContent: {
         paragraph1: {
-          en: "Jiwan Pariwartan — meaning 'Life Transformation' in Nepali — was established over 6 years ago by a group of physicians, psychologists, and recovered individuals who saw the desperate need for dignified, professional addiction care in Nepal.",
+          en: "jeewan Pariwartan — meaning 'Life Transformation' in Nepali — was established over 6 years ago by a group of physicians, psychologists, and recovered individuals who saw the desperate need for dignified, professional addiction care in Nepal.",
           ne: "‘जीवन परिवर्तन’ — अर्थात् जीवनको सकारात्मक रूपान्तरण — नेपालमा सम्मानजनक र व्यावसायिक लत उपचार सेवाको आवश्यकता महसुस गर्ने चिकित्सक, मनोवैज्ञानिक तथा पुनर्स्थापित व्यक्तिहरूको समूहद्वारा ६ वर्षभन्दा बढी अघि स्थापना गरिएको थियो।",
         },
 
@@ -164,7 +164,7 @@ export const translations = {
 
       centerInfo: {
         title: {
-          en: "Jiwan Pariwartan",
+          en: "jeewan Pariwartan",
           ne: "जीवन परिवर्तन",
         },
 
@@ -282,7 +282,7 @@ export const translations = {
           },
           title: { en: "Founded", ne: "स्थापना" },
           description: {
-            en: "Jiwan Pariwartan opened its doors with a small residential program and a dedicated team of 8 professionals.",
+            en: "jeewan Pariwartan opened its doors with a small residential program and a dedicated team of 8 professionals.",
             ne: "जीवन परिवर्तनले एउटा साना आवासीय कार्यक्रम र ८ समर्पित पेशाविद्हरूको टोलीसँग आफ्नो ढोका खोल्यो।",
           },
         },
@@ -433,7 +433,7 @@ export const translations = {
   servicesSection: {
     // Long Introduction Paragraph
     name: {
-      en: "Jiwan Pariwartan Rehab Center",
+      en: "jeewan Pariwartan Rehab Center",
       np: "जीवन परिवर्तन रिह्याब सेन्टर",
     },
 
@@ -544,7 +544,7 @@ export const translations = {
   // why Choose us
   whyChooseUs: {
     eyebrow: {
-      en: "Why Jiwan Pariwartan",
+      en: "Why jeewan Pariwartan",
       ne: "किन जीवन परिवर्तन",
     },
     title: {
@@ -719,7 +719,7 @@ export const translations = {
     title: { en: "Real Lives,", ne: "वास्तविक जीवन," },
     highlight: { en: "Real Transformation", ne: "वास्तविक रूपान्तरण" },
     subtitle: {
-      en: "Hear from those who have walked the path of recovery at Jiwan Pariwartan.",
+      en: "Hear from those who have walked the path of recovery at jeewan Pariwartan.",
       ne: "जीवन परिवर्तनमा पुनर्स्थापनाको मार्गमा हिँडेकाहरूबाट सुन्नुहोस्।",
     },
   },
@@ -743,7 +743,7 @@ export const translations = {
         },
       },
       description: {
-        en: "Every corner of Jiwan Pariwartan has been thoughtfully designed to promote calm, safety, and healing — a sanctuary where transformation begins.",
+        en: "Every corner of jeewan Pariwartan has been thoughtfully designed to promote calm, safety, and healing — a sanctuary where transformation begins.",
         ne: "जीवन परिवर्तनको हरेक कुनालाई शान्ति, सुरक्षा र उपचारलाई बढावा दिन सोच-विचार गरी डिजाइन गरिएको छ — एक अभयारण्य जहाँ रूपान्तरण सुरु हुन्छ।",
       },
     },
@@ -1031,7 +1031,7 @@ export const translations = {
   footer: {
     brand: {
       title: {
-        en: "Jiwan Pariwartan",
+        en: "jeewan Pariwartan",
         ne: "जीवन परिवर्तन",
       },
       subtitle: {

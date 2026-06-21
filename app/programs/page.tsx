@@ -6,7 +6,7 @@ import ContactCTA from "@/components/sections/ContactCTA";
 export const metadata: Metadata = {
   title: "Rehabilitation Programs",
   description:
-    "Explore Jiwan Pariwartan's comprehensive rehabilitation programs: alcohol recovery, drug recovery, mental wellness, medical detox, family support, and individual counseling in Nepal.",
+    "Explore jeewan Pariwartan's comprehensive rehabilitation programs: alcohol recovery, drug recovery, mental wellness, medical detox, family support, and individual counseling in Nepal.",
 };
 
 export default function ProgramsPage() {

@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: ["/api/", "/_next/"],
     },
-    sitemap: "https://jiwanpariwartan.com/sitemap.xml",
+    sitemap: "https://jeewanpariwartan.com/sitemap.xml",
   };
 }

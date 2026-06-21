@@ -26,7 +26,7 @@ export default function ContactSection() {
     {
       icon: Mail,
       title: t.contactInfo.email.title[language],
-      lines: ["info@jiwanpariwartan.com"],
+      lines: ["info@jeewanpariwartan.com"],
       color: "bg-violet-100 text-violet-700",
     },
     {
@@ -125,7 +125,7 @@ export default function ContactSection() {
                 </p>
 
                 <iframe
-                  title="Jiwan Pariwartan Location"
+                  title="jeewan Pariwartan Location"
                   src="https://www.google.com/maps?q=Kathmandu,Nepal&output=embed"
                   width="100%"
                   height="100%"
@@ -138,7 +138,7 @@ export default function ContactSection() {
             </div> */}
             <div className="rounded-2xl overflow-hidden border border-gray-200 h-64 shadow-sm">
               <iframe
-                title="Jiwan Pariwartan Location"
+                title="jeewan Pariwartan Location"
                 src="https://www.google.com/maps?q=Kathmandu,Nepal&output=embed"
                 width="100%"
                 height="100%"

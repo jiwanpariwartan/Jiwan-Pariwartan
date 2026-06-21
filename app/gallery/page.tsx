@@ -6,7 +6,7 @@ import ContactCTA from "@/components/sections/ContactCTA";
 export const metadata: Metadata = {
   title: "Gallery – Our Healing Environment",
   description:
-    "Explore Jiwan Pariwartan's healing spaces — serene gardens, therapy rooms, yoga studio, group spaces, and dining facilities designed to support recovery.",
+    "Explore jeewan Pariwartan's healing spaces — serene gardens, therapy rooms, yoga studio, group spaces, and dining facilities designed to support recovery.",
 };
 
 export default function GalleryPage() {

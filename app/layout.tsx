@@ -24,10 +24,10 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://jiwanpariwartan.com"),
+  metadataBase: new URL("https://jeewanpariwartan.com"),
   title: {
-    default: "Jiwan Pariwartan – Premier Rehabilitation Center in Nepal",
-    template: "%s | Jiwan Pariwartan Rehab Center Nepal",
+    default: "jeewan Pariwartan – Premier Rehabilitation Center in Nepal",
+    template: "%s | jeewan Pariwartan Rehab Center Nepal",
   },
   description:
     "Nepal's most trusted rehabilitation and recovery center. Expert treatment for alcohol addiction, drug recovery, mental wellness, and family healing. Compassionate, evidence-based care in Kathmandu.",
@@ -40,17 +40,17 @@ export const metadata: Metadata = {
     "mental wellness Nepal",
     "detox center Nepal",
     "drug rehab Kathmandu",
-    "jiwan pariwartan",
+    "jeewan pariwartan",
     "wellness rehabilitation Nepal",
   ],
-  authors: [{ name: "Jiwan Pariwartan Rehabilitation Center" }],
-  creator: "Jiwan Pariwartan",
+  authors: [{ name: "jeewan Pariwartan Rehabilitation Center" }],
+  creator: "jeewan Pariwartan",
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://jiwanpariwartan.com",
-    siteName: "Jiwan Pariwartan Rehabilitation Center",
-    title: "Jiwan Pariwartan – Premier Rehabilitation Center in Nepal",
+    url: "https://jeewanpariwartan.com",
+    siteName: "jeewan Pariwartan Rehabilitation Center",
+    title: "jeewan Pariwartan – Premier Rehabilitation Center in Nepal",
     description:
       "Nepal's most trusted rehabilitation center offering compassionate, evidence-based addiction treatment and mental wellness care.",
     images: [
@@ -58,13 +58,13 @@ export const metadata: Metadata = {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Jiwan Pariwartan Rehabilitation Center Nepal",
+        alt: "jeewan Pariwartan Rehabilitation Center Nepal",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Jiwan Pariwartan – Premier Rehabilitation Center in Nepal",
+    title: "jeewan Pariwartan – Premier Rehabilitation Center in Nepal",
     description:
       "Nepal's most trusted rehabilitation center for addiction recovery and mental wellness.",
     images: ["/og-image.jpg"],

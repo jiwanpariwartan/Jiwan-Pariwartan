@@ -5,7 +5,7 @@ import ContactSection from "@/components/sections/ContactSection";
 export const metadata: Metadata = {
   title: "Contact Us – Get Help Today",
   description:
-    "Reach out to Jiwan Pariwartan Rehabilitation Center. Free, confidential consultation available 24/7. Start your recovery journey today.",
+    "Reach out to jeewan Pariwartan Rehabilitation Center. Free, confidential consultation available 24/7. Start your recovery journey today.",
 };
 
 export default function ContactPage() {
