@@ -141,7 +141,7 @@ export default function PreHeader() {
 
           <div className="flex items-center">
             <a
-              href="https://facebook.com/yourpage"
+              href="https://www.facebook.com/profile.php?id=61575065676083"
               target="_blank"
               rel="noopener noreferrer"
               className="p-1.5 text-white/60 hover:text-white transition-colors"
@@ -151,17 +151,7 @@ export default function PreHeader() {
             </a>
 
             <a
-              href="https://instagram.com/yourpage"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-1.5 text-white/60 hover:text-white transition-colors"
-              aria-label="Instagram"
-            >
-              <FaInstagram size={12} />
-            </a>
-
-            <a
-              href="https://tiktok.com/@yourpage"
+              href="https://www.tiktok.com/@9841556130godawari"
               target="_blank"
               rel="noopener noreferrer"
               className="p-1.5 text-white/60 hover:text-white transition-colors"
